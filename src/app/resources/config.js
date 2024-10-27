@@ -13,8 +13,8 @@ const routes = {
     '/':        true,
     '/about':   true,
     '/work':    true,
-    '/blog':    true,
-    '/gallery': true,
+    '/blog':    false,
+    '/gallery': false,
 }
 
 // Enable password protection on selected routes
@@ -25,15 +25,15 @@ const protectedRoutes = {
 
 const effects = {
     gradient: true,
-    dots:     true,
-    lines:    false,
+    dots:     false,
+    lines:    true,
 }
 
 const style = {
     theme:       'dark',         // dark | light
     neutral:     'gray',         // sand | gray | slate
     brand:       'aqua',         // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-    accent:      'yellow',       // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+    accent:      'aqua',       // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
     solid:       'contrast',     // color | contrast
     solidStyle:  'flat',         // flat | plastic
     border:      'playful',      // rounded | playful | conservative
@@ -42,7 +42,7 @@ const style = {
 }
 
 const display = {
-    location: true,
+    location: false,
     time:     true
 }
 
