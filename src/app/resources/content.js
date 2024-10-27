@@ -24,7 +24,7 @@ const social = [
     {
         name: 'GitHub',
         icon: 'github',
-        link: 'https://github.com/Yamnyr/portfolio',
+        link: 'https://github.com/Yamnyr/',
     },
     {
         name: 'LinkedIn',
@@ -39,7 +39,7 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'q.waroquet@gmail.com',
+        link: 'mailto:q.waroquet@gmail.com',
     },
 ]
 
