@@ -1,19 +1,19 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Quentin',
+    lastName:  'WAROQUET',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
+    role:      'Developer web',
     avatar:    '/images/avatar.jpg',
-    location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+    location:  'Europe/Paris',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    languages: ['Français', 'English']  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
-    display: true,
+    display: false,
     title: <>Subscribe to {person.firstName}'s Newsletter</>,
     description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
 }
@@ -24,12 +24,12 @@ const social = [
     {
         name: 'GitHub',
         icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
+        link: 'https://github.com/Yamnyr/portfolio',
     },
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/once-ui/',
+        link: 'https://www.linkedin.com/in/quentin-waroquet-017008203/',
     },
     {
         name: 'X',
@@ -39,21 +39,21 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:example@gmail.com',
+        link: 'q.waroquet@gmail.com',
     },
 ]
 
 const home = {
-    label: 'Home',
+    label: 'Accueil',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    headline: <>Developpeur web</>,
+    subline: <>💻 Passionné de développement web <br/>🎓 Étudiant à <InlineCode>l'école IPSSI</InlineCode> en Mastère Big Data & IA <br/>Développeur, aspirant CEO chez <InlineCode>Hurlea</InlineCode> (un jour... peut-être 😄)</>
 }
 
 const about = {
-    label: 'About',
-    title: 'About me',
+    label: 'A propos de moi',
+    title: 'A propos de moi',
     description: `Meet ${person.name}, ${person.role} from ${person.location}`,
     tableOfContent: {
         display: true,
@@ -63,95 +63,301 @@ const about = {
         display: true
     },
     calendar: {
-        display: true,
+        display: false,
         link: 'https://cal.com'
     },
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        description: <>Je suis un développeur web passionné par la création d'applications web innovantes et performantes.
+            Mon expertise s'étend du développement front-end au back-end, en passant par l'optimisation des performances et l'expérience utilisateur,
+            toujours avec le souci du détail que j'ai développé à travers mes formations et mes expériences professionnels.
+            Actuellement en alternance à l'école IPSSI
+
+        </>
     },
     work: {
         display: true, // set to false to hide this section
-        title: 'Work Experience',
+        title: 'Experience pro',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'DFB',
+                timeframe: '2023 - Present',
+                role: 'Developpeur web',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Création d'une plateforme e-commerce multi-vendeurs, incluant un système de comparaison de produits, sous Symfony.</>,
+                    <>développement de site sur mesure</>,
+                    <>Réalisation et maintenance de sites Wordpress</>,
+                    <>développement d'un outil de gestion de projets adaptés a l'entreprise</>,
                 ],
-                images: [ // optional: leave the array empty if you don't want to display images
-                    {
-                        src: '/images/projects/project-01/cover-01.jpg',
-                        alt: 'Once UI Project',
-                        width: 16,
-                        height: 9
-                    }
+                images: [
+                    // {
+                    //     src: '/images/projects/DropIt/cover-01.jpg',
+                    //     alt: 'Once UI Project',
+                    //     width: 16,
+                    //     height: 9
+                    // }
                 ]
             },
             {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
+                company: 'Netcreative',
+                timeframe: '2023',
+                role: 'Developpeur web',
                 achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
+                    <>Confection / refonte de sites internet sous Wordpress</>,
+                    <>Création, modification de scripts en PHP / JS</>,
+                    <>réalisation de plugins Wordpress</>,
                 ],
                 images: [ ]
             }
         ]
     },
     studies: {
-        display: true, // set to false to hide this section
-        title: 'Studies',
+        display: true,
+        title: 'Formations',
         institutions: [
             {
-                name: 'University of Jakarta',
-                description: <>Studied software engineering.</>,
+                name: 'Mastère Dev bigdata & IA',
+                description: <>IPSSI</>,
+                images: [
+                    {
+                        src: '/images/studies/ipssi.png',
+                        alt: 'IPSSI Logo',
+                        width: 4,
+                        height: 4
+                    }
+                ]
             },
             {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'Bachelor Dév fullstack & DevOps',
+                description: <>IPSSI</>,
+                images: [
+                    {
+                        src: '/images/studies/ipssi.png',
+                        alt: 'IPSSI Logo',
+                        width: 4,
+                        height: 4
+                    }
+                ]
+            },
+            {
+                name: 'Licence pro WIMSI',
+                description: <>IUT de Reims</>,
+                images: [
+                    {
+                        src: '/images/studies/iut.png',
+                        alt: 'IPSSI Logo',
+                        width: 4,
+                        height: 4
+                    }
+                ]
             }
         ]
     },
     technical: {
-        display: true, // set to false to hide this section
-        title: 'Technical skills',
+        display: true,
+        title: 'Compétences',
+
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+                title: 'Langages de développement',
+                description: <>HTML, CSS, JavaScript, PHP, Python, SQL</>,
                 images: [
                     {
-                        src: '/images/projects/project-01/cover-02.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
+                        src: '/images/competences/html.png',
+                        alt: 'html',
+                        width: 4,
+                        height: 4
                     },
                     {
-                        src: '/images/projects/project-01/cover-03.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
+                        src: '/images/competences/css.png',
+                        alt: 'css',
+                        width: 4,
+                        height: 4
                     },
+                    {
+                        src: '/images/competences/js.png',
+                        alt: 'js',
+                        width: 4,
+                        height: 4
+                    },
+                    {
+                        src: '/images/competences/typescript.png',
+                        alt: 'typescript',
+                        width: 4,
+                        height: 4
+                    },
+                    {
+                        src: '/images/competences/php.png',
+                        alt: 'php',
+                        width: 4,
+                        height: 4
+                    },
+                    {
+                        src: '/images/competences/python.png',
+                        alt: 'python',
+                        width: 4,
+                        height: 4
+                    },
+                    {
+                        src: '/images/competences/sql.png',
+                        alt: 'sql',
+                        width: 4,
+                        height: 4
+                    }
                 ]
             },
             {
-                title: 'Next.js',
-                description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+                title: 'Symfony',
+                description: <>Création d'applications PHP robustes avec le Framework Symfony et Doctrine ORM.</>,
                 images: [
                     {
-                        src: '/images/projects/project-01/cover-04.jpg',
-                        alt: 'Project image',
-                        width: 16,
-                        height: 9
-                    },
+                        src: '/images/competences/symfony.png',
+                        alt: 'Symfony',
+                        width: 4,
+                        height: 4
+                    }
                 ]
-            }
+            },
+            {
+                title: 'React / react native',
+                description: <>Création d'interfaces utilisateur dynamiques et réactives avec l'écosystème React.<br/>
+                    Développement d'applications mobiles multiplateformes pour iOS et Android.</>,
+                images: [
+                    {
+                        src: '/images/competences/react.png',
+                        alt: 'react',
+                        width: 4,
+                        height: 4
+                    }
+                ]
+            },
+            // {
+            //     title: 'React Native',
+            //     description: <>Développement d'applications mobiles multiplateformes pour iOS et Android.</>,
+            //     images: [
+            //         {
+            //             src: '/images/competences/react.png',
+            //             alt: 'react-native',
+            //             width: 4,
+            //             height: 4
+            //         }
+            //     ]
+            // },
+            {
+                title: 'Vue.js',
+                description: <>Développement d'interfaces utilisateur progressives et modulaires avec Vue.js.</>,
+                images: [
+                    {
+                        src: '/images/competences/vue.png',
+                        alt: 'vue',
+                        width: 4,
+                        height: 4
+                    }
+                ]
+            },
+            {
+                title: 'Angular',
+                description: <>Développement d'applications web robustes avec le framework Angular de Google.</>,
+                images: [
+                    {
+                        src: '/images/competences/angular.png',
+                        alt: 'angular',
+                        width: 4,
+                        height: 4
+                    }
+                ]
+            },
+            {
+                title: 'Flutter',
+                description: <>Développement d'applications multiplateformes performantes avec le SDK Flutter de Google.</>,
+                images: [
+                    {
+                        src: '/images/competences/flutter.png',
+                        alt: 'flutter',
+                        width: 4,
+                        height: 4
+                    }
+                ]
+            },
+            {
+                title: 'Node.js',
+                description: <>Création d'applications serveur scalables et haute performance avec Node.js.</>,
+                images: [
+                    {
+                        src: '/images/competences/node-js.png',
+                        alt: 'node-js',
+                        width: 4,
+                        height: 4
+                    }
+                ]
+            },
+            {
+                title: 'ExpressJS',
+                description: <>Construction d'APIs backend évolutives et d'applications web avec Node.js.</>,
+                images: [
+                    {
+                        src: '/images/competences/express.png',
+                        alt: 'Symfony',
+                        width: 4,
+                        height: 4
+                    }
+                ]
+            },
+            {
+                title: 'Figma',
+                description: <>Conception d'interfaces utilisateur modernes et création de prototypes interactifs.</>,
+                images: [
+                    {
+                        src: '/images/competences/figma.png',
+                        alt: 'figma',
+                        width: 4,
+                        height: 4
+                    }
+                ]
+            },
+            {
+                title: 'MySQL/PostgreSQL',
+                description: <>Gestion de bases de données relationnelles avec requêtes avancées et optimisation.</>,
+                images: [
+                    {
+                        src: '/images/competences/postgresql.png',
+                        alt: 'postgresql',
+                        width: 4,
+                        height: 4
+                    },
+                    {
+                        src: '/images/competences/mysql.png',
+                        alt: 'mysql',
+                        width: 4,
+                        height: 4
+                    }
+                ]
+            },
+            {
+                title: 'Git',
+                description: <>Contrôle de version et développement collaboratif avec Git et GitHub.</>,
+                images: [
+                    {
+                        src: '/images/competences/git.png',
+                        alt: 'git',
+                        width: 4,
+                        height: 4
+                    },
+                    {
+                        src: '/images/competences/gitlab.png',
+                        alt: 'gitlab',
+                        width: 4,
+                        height: 4
+                    },
+                    {
+                        src: '/images/competences/github.png',
+                        alt: 'github',
+                        width: 4,
+                        height: 4
+                    }
+                ]
+            },
         ]
     }
 }
@@ -165,7 +371,7 @@ const blog = {
 }
 
 const work = {
-    label: 'Work',
+    label: 'Projets',
     title: 'My projects',
     description: `Design and dev projects by ${person.name}`
     // Create new project pages by adding a new .mdx file to app/blog/posts
@@ -173,78 +379,78 @@ const work = {
 }
 
 const gallery = {
-    label: 'Gallery',
+    label: 'Galerie',
     title: 'My photo gallery',
     description: `A photo collection by ${person.name}`,
     // Images from https://pexels.com
     images: [
-        { 
-            src: '/images/gallery/img-01.jpg', 
+        {
+            src: '/images/gallery/img-01.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-02.jpg', 
+        {
+            src: '/images/gallery/img-02.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-03.jpg', 
+        {
+            src: '/images/gallery/img-03.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-04.jpg', 
+        {
+            src: '/images/gallery/img-04.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-05.jpg', 
+        {
+            src: '/images/gallery/img-05.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-06.jpg', 
+        {
+            src: '/images/gallery/img-06.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-07.jpg', 
+        {
+            src: '/images/gallery/img-07.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-08.jpg', 
+        {
+            src: '/images/gallery/img-08.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-09.jpg', 
+        {
+            src: '/images/gallery/img-09.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-10.jpg', 
+        {
+            src: '/images/gallery/img-10.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-11.jpg', 
+        {
+            src: '/images/gallery/img-11.jpg',
             alt: 'image',
             orientation: 'vertical'
         },
-        { 
-            src: '/images/gallery/img-12.jpg', 
+        {
+            src: '/images/gallery/img-12.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-13.jpg', 
+        {
+            src: '/images/gallery/img-13.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },
-        { 
-            src: '/images/gallery/img-14.jpg', 
+        {
+            src: '/images/gallery/img-14.jpg',
             alt: 'image',
             orientation: 'horizontal'
         },

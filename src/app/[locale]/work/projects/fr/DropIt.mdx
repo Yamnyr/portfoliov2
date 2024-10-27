@@ -1,0 +1,65 @@
+---
+title: "DropIt"
+publishedAt: "2024-09-03"
+summary: "Projet Annuel IPSSI - Plateforme de Gestion de Fichiers Clients pour Cabinet d'Architectes"
+images:
+  - "/images/projects/DropIt/cover-01.jpg"
+  - "/images/projects/DropIt/cover-02.jpg"
+  - "/images/projects/DropIt/cover-03.jpg"
+team:
+  - name: "WAROQUET Quentin"
+    role: "Developpeur web"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/quentin-waroquet-017008203/"
+  - name: "MATTEI Emilien"
+    role: "Developpeur web"
+  - name: "CORDIER Maxime"
+    role: "Developpeur web"
+---
+
+## Description
+
+Ce projet est une plateforme de gestion de fichiers destinée à un cabinet d'architectes. La plateforme permet aux clients de gérer leurs fichiers et à l'administration de suivre l'utilisation des fichiers et l'espace de stockage.
+## Fonctionnalités
+
+### Pour le client
+
+- Gestion de compte : Inscription, connexion, modification de profil et mot de passe, suppression de compte
+Gestion des fichiers :
+  - visualisation, et suppression sécurisés
+  - Création et gestion de dossiers et sous-dossiers
+  - Navigation intuitive dans l'arborescence des fichiers
+  - Système de favoris pour un accès rapide
+
+- Gestion de l'espace de stockage :
+  - Visualisation de l'espace utilisé
+  - Achat d'espace supplémentaire avec génération automatique de factures
+
+- Fonctionnalités avancées :
+  - Filtrage et tri des fichiers (date, taille, nom, format)
+  - Mode jour/nuit pour une expérience utilisateur personnalisée
+
+
+Notifications : Emails automatisés pour les actions importantes (inscription, suppression de compte, achat d'espace)
+### Pour l'administrateur
+
+- Tableau de bord analytique :
+  - Statistiques globales sur l'utilisation de la plateforme
+    - Espace de stockage utilisé par client
+    - Nombre de fichiers par client
+    - Nombre de fichiers uploadés par jour
+    - Nombre de fichiers total
+    - Nombre d'utilisateurs
+    - Montant total des factures
+  - Suivi détaillé par client (espace utilisé, nombre de fichiers)
+  - Analyse des tendances (uploads quotidiens, croissance utilisateurs)
+- Gestion des utilisateurs : Vue d'ensemble de tous les clients et leurs informations
+- Supervision des fichiers : Accès à l'ensemble des fichiers stockés sur la plateforme
+- Gestion financière : Suivi complet des factures et des transactions
+
+## Technologies Used
+
+- Backend : Symfony 6.4.x, PHP 8.1+
+- Frontend : Twig, JavaScript, Bootstrap 5
+- Base de données : MySQL/
+- Autres : Doctrine ORM, Faker, Stripe, Mailer

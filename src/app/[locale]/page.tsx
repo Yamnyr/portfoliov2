@@ -88,7 +88,7 @@ export default function Home(
 								{home.headline}
 							</Heading>
 						</RevealFx>
-						<RevealFx translateY="8" delay={0.2}>
+						<RevealFx translateY="8" delay={0.4}>
 							<Text
 								wrap="balance"
 								onBackground="neutral-weak"
@@ -96,7 +96,7 @@ export default function Home(
 								{home.subline}
 							</Text>
 						</RevealFx>
-						<RevealFx translateY="12" delay={0.4}>
+						<RevealFx translateY="12" delay={0.8}>
 							<Button
 								data-border="rounded"
 								href={`/${locale}/about`}
@@ -119,18 +119,21 @@ export default function Home(
 					</Flex>
 				
 			</Flex>
-			<RevealFx translateY="16" delay={0.6}>
-				<Projects range={[1,1]} locale={locale}/>
-			</RevealFx>
+			{/*<RevealFx translateY="16" delay={0.6}>*/}
+			{/*	<Projects range={[1,1]} locale={locale}/>*/}
+			{/*</RevealFx>*/}
 			{routes['/blog'] && (
 				<Flex fillWidth paddingX="20">
 					<Posts range={[1,2]} columns="2" locale={locale}/>
 				</Flex>
 			)}
-			<Projects range={[2]} locale={locale}/>
-			{ newsletter.display &&
-				<Mailchimp newsletter={newsletter} />
-			}
+
+			<RevealFx translateY="8"  delay={1.2}>
+				<Projects range={[1]} locale={locale}/>
+				{ newsletter.display &&
+					<Mailchimp newsletter={newsletter} />
+				}
+			</RevealFx>
 		</Flex>
 	);
 }

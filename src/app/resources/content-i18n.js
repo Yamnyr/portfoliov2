@@ -83,7 +83,7 @@ const createI18nContent = (t) => {
                     achievements: t("about.work.experiences.FLY.achievements").split(";"),
                     images: [ // optional: leave the array empty if you don't want to display images
                         {
-                            src: '/images/projects/project-01/cover-01.jpg',
+                            src: '/images/projects/DropIt/cover-01.jpg',
                             alt: 'Once UI Project',
                             width: 16,
                             height: 9
@@ -104,12 +104,40 @@ const createI18nContent = (t) => {
             title: 'Studies',
             institutions: [
                 {
-                    name: 'University of Jakarta',
-                    description: <>{t(`about.studies.institutions.University of Jakarta.description`)}</>,
+                    name: 'Mastère Dev bigdata & IA',
+                    description: <>IPSSI</>,
+                    images: [
+                        {
+                            src: '/images/studies/ipssi.png',
+                            alt: 'IPSSI Logo',
+                            width: 4,
+                            height: 4
+                        }
+                    ]
                 },
                 {
-                    name: 'Build the Future',
-                    description: <>{t("about.studies.institutions.Build the Future.description")}</>,
+                    name: 'Bachelor Dév fullstack & DevOps',
+                    description: <>IPSSI</>,
+                    images: [
+                        {
+                            src: '/images/studies/ipssi.png',
+                            alt: 'IPSSI Logo',
+                            width: 4,
+                            height: 4
+                        }
+                    ]
+                },
+                {
+                    name: 'Licence pro WIMSI',
+                    description: <>IUT de Reims</>,
+                    images: [
+                        {
+                            src: '/images/studies/iut.png',
+                            alt: 'IPSSI Logo',
+                            width: 4,
+                            height: 4
+                        }
+                    ]
                 }
             ]
         },
@@ -122,13 +150,13 @@ const createI18nContent = (t) => {
                     description: <>{t("about.technical.skills.Figma.description")}</>,
                     images: [
                         {
-                            src: '/images/projects/project-01/cover-02.jpg',
+                            src: '/images/projects/DropIt/cover-02.jpg',
                             alt: 'Project image',
                             width: 16,
                             height: 9
                         },
                         {
-                            src: '/images/projects/project-01/cover-03.jpg',
+                            src: '/images/projects/DropIt/cover-03.jpg',
                             alt: 'Project image',
                             width: 16,
                             height: 9
@@ -140,7 +168,7 @@ const createI18nContent = (t) => {
                     description: <>{t("about.technical.skills.Nextjs.description")}</>, // "." not accepted in next-intl namespace
                     images: [
                         {
-                            src: '/images/projects/project-01/cover-04.jpg',
+                            src: '/images/projects/DropIt/cover-04.jpg',
                             alt: 'Project image',
                             width: 16,
                             height: 9
@@ -183,12 +211,12 @@ const createI18nContent = (t) => {
                 alt: 'image',
                 orientation: 'horizontal'
             },
-            { 
+            {
                 src: '/images/gallery/img-03.jpg',
                 alt: 'image',
                 orientation: 'vertical'
             },
-            { 
+            {
                 src: '/images/gallery/img-04.jpg',
                 alt: 'image',
                 orientation: 'horizontal'
@@ -223,7 +251,7 @@ const createI18nContent = (t) => {
                 alt: 'image',
                 orientation: 'horizontal'
             },
-            { 
+            {
                 src: '/images/gallery/img-11.jpg',
                 alt: 'image',
                 orientation: 'vertical'
@@ -238,7 +266,7 @@ const createI18nContent = (t) => {
                 alt: 'image',
                 orientation: 'horizontal'
             },
-            { 
+            {
                 src: '/images/gallery/img-14.jpg',
                 alt: 'image',
                 orientation: 'horizontal'

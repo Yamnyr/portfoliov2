@@ -1,5 +1,5 @@
 import { getPosts } from '@/app/utils';
-import { Flex } from '@/once-ui/components';
+import {Flex, RevealFx} from '@/once-ui/components';
 import { Projects } from '@/components/work/Projects';
 import { baseURL, renderContent } from '@/app/resources';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
@@ -78,7 +78,10 @@ export default function Work(
                     }),
                 }}
             />
-            <Projects locale={locale}/>
+
+            <RevealFx translateY="8">
+                <Projects locale={locale}/>
+            </RevealFx>
         </Flex>
     );
 }

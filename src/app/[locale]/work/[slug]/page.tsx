@@ -6,6 +6,7 @@ import { baseURL, renderContent } from '@/app/resources';
 import { routing } from '@/i18n/routing';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
+import {ProjectCard} from "@/components";
 
 interface WorkParams {
     params: {
@@ -141,6 +142,7 @@ export default function Project({ params }: WorkParams) {
 					alt="image"
 					src={post.metadata.images[0]}/>
 			)}
+
 			<Flex style={{margin: 'auto'}}
 				as="article"
 				maxWidth="xs" fillWidth
