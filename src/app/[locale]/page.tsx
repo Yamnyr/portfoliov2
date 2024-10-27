@@ -88,7 +88,7 @@ export default function Home(
 								{home.headline}
 							</Heading>
 						</RevealFx>
-						<RevealFx translateY="8" delay={0.4}>
+						<RevealFx translateY="8" delay={0}>
 							<Text
 								wrap="balance"
 								onBackground="neutral-weak"
@@ -96,7 +96,7 @@ export default function Home(
 								{home.subline}
 							</Text>
 						</RevealFx>
-						<RevealFx translateY="12" delay={0.8}>
+						<RevealFx translateY="12" delay={0.4}>
 							<Button
 								data-border="rounded"
 								href={`/${locale}/about`}
@@ -128,7 +128,7 @@ export default function Home(
 				</Flex>
 			)}
 
-			<RevealFx translateY="8"  delay={1.2}>
+			<RevealFx translateY="8"  delay={0.8}>
 				<Projects range={[1]} locale={locale}/>
 				{ newsletter.display &&
 					<Mailchimp newsletter={newsletter} />

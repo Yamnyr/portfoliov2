@@ -72,11 +72,11 @@ export const Header = () => {
 
     return (
         <Flex style={{height: 'fit-content'}}
-            className={styles.position}
-            as="header"
-            zIndex={9}
-            fillWidth padding="8"
-            justifyContent="center">
+              className={styles.position}
+              as="header"
+              zIndex={9}
+              fillWidth padding="8"
+              justifyContent="center">
             <Flex
                 hide="s"
                 paddingLeft="12" fillWidth
@@ -136,7 +136,7 @@ export const Header = () => {
                 </Flex>
             </Flex>
             <Flex
-                paddingRight="12"
+                paddingRight="12" fillWidth
                 justifyContent="flex-end" alignItems="center"
                 textVariant="body-default-s"
                 gap="20">
@@ -144,17 +144,17 @@ export const Header = () => {
                     background="surface" border="neutral-medium" borderStyle="solid-1" radius="m-4" shadow="l"
                     padding="4" gap="2"
                     justifyContent="center">
-                        {i18n && routing.locales.map((locale, index) => (
-                            <ToggleButton
-                                key={index}
-                                selected={params?.locale === locale}
-                                onClick={() => handleLanguageChange(locale)}
-                                className={isPending && 'pointer-events-none opacity-60' || ''}
-                                >
-                                {locale.toUpperCase()}
-                            </ToggleButton>
-                        ))}
-                    </Flex>
+                    {i18n && routing.locales.map((locale, index) => (
+                        <ToggleButton
+                            key={index}
+                            selected={params?.locale === locale}
+                            onClick={() => handleLanguageChange(locale)}
+                            className={isPending && 'pointer-events-none opacity-60' || ''}
+                        >
+                            {locale.toUpperCase()}
+                        </ToggleButton>
+                    ))}
+                </Flex>
                 }
                 <Flex hide="s">
                     { display.time && (

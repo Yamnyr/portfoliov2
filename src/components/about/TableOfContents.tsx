@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Flex, Text } from '@/once-ui/components';
+import {Flex, RevealFx, Text} from '@/once-ui/components';
 import styles from './about.module.scss';
 
 interface TableOfContentsProps {
@@ -48,44 +48,46 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
             {structure
                 .filter(section => section.display)
                 .map((section, sectionIndex) => (
-                <Flex key={sectionIndex} gap="12" direction="column">
-                    <Flex
-                        style={{ cursor: 'pointer' }}
-                        className={styles.hover}
-                        gap="8"
-                        alignItems="center"
-                        onClick={() => scrollTo(section.title, 80)}>
-                        <Flex
-                            height="1" width="16"
-                            background="neutral-strong">
-                        </Flex>
-                        <Text>
-                            {section.title}
-                        </Text>
-                    </Flex>
-                    {about.tableOfContent.subItems && (
-                        <>
-                            {section.items.map((item, itemIndex) => (
+                    <RevealFx translateY="8" delay={0.4}>
+                        <Flex key={sectionIndex} gap="12" direction="column">
+                            <Flex
+                                style={{ cursor: 'pointer' }}
+                                className={styles.hover}
+                                gap="8"
+                                alignItems="center"
+                                onClick={() => scrollTo(section.title, 80)}>
                                 <Flex
-                                    key={itemIndex}
-                                    style={{ cursor: 'pointer' }}
-                                    className={styles.hover}
-                                    gap="12" paddingLeft="24"
-                                    alignItems="center"
-                                    onClick={() => scrollTo(item, 80)}>
-                                    <Flex
-                                        height="1" width="8"
-                                        background="neutral-strong">
-                                    </Flex>
-                                    <Text>
-                                        {item}
-                                    </Text>
+                                    height="1" width="16"
+                                    background="neutral-strong">
                                 </Flex>
-                            ))}
-                        </>
-                    )}
-                </Flex>
-            ))}
+                                <Text>
+                                    {section.title}
+                                </Text>
+                            </Flex>
+                            {about.tableOfContent.subItems && (
+                                <>
+                                    {section.items.map((item, itemIndex) => (
+                                        <Flex
+                                            key={itemIndex}
+                                            style={{ cursor: 'pointer' }}
+                                            className={styles.hover}
+                                            gap="12" paddingLeft="24"
+                                            alignItems="center"
+                                            onClick={() => scrollTo(item, 80)}>
+                                            <Flex
+                                                height="1" width="8"
+                                                background="neutral-strong">
+                                            </Flex>
+                                            <Text>
+                                                {item}
+                                            </Text>
+                                        </Flex>
+                                    ))}
+                                </>
+                            )}
+                        </Flex>
+                    </RevealFx>
+                ))}
         </Flex>
     );
 };
