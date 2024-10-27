@@ -1,0 +1,81 @@
+{
+  "person": {
+    "role": "Ingénieur Design"
+  },
+  "newsletter": {
+    "title": "Abonnez-vous à la newsletter de {firstName}",
+    "description": "J'écris occasionnellement sur le design, la technologie et je partage mes réflexions sur l'intersection entre créativité et ingénierie",
+    "button": "S'inscrire"
+  },
+  "home": {
+    "label": "Accueil",
+    "title": "Portfolio de {name}",
+    "description": "Site portfolio présentant mon travail en tant qu'{role}",
+    "headline": "Ingénieur design et développeur",
+    "subline": "Je suis Selene, ingénieure design chez FLY, où je crée des expériences utilisateur intuitives. En dehors du travail, je développe mes propres projets."
+  },
+  "about": {
+    "label": "À propos",
+    "title": "À propos de moi",
+    "description": "Découvrez {name}, {role} de {location}",
+    "intro": {
+      "title": "Introduction",
+      "description": "Selene est une ingénieure design basée à Jakarta, passionnée par la transformation de défis complexes en solutions design simples et élégantes. Son travail englobe les interfaces numériques, les expériences interactives et la convergence du design et de la technologie."
+    },
+    "work": {
+      "title": "Expérience Professionnelle",
+      "experiences": {
+        "FLY": {
+          "timeframe": "2022 - Présent",
+          "role": "Ingénieure Design Senior",
+          "achievements": "Refonte de l'UI/UX de la plateforme FLY, aboutissant à une augmentation de 20% de l'engagement utilisateur et des temps de chargement 30% plus rapides.;Dirigé l'intégration d'outils IA dans les flux de travail design, permettant aux designers d'itérer 50% plus rapidement."
+        },
+        "Creativ3": {
+          "timeframe": "2018 - 2022",
+          "role": "Designer Lead",
+          "achievements": "Développement d'un système de design unifiant la marque sur plusieurs plateformes, améliorant la cohérence du design de 40%.;Direction d'une équipe pluridisciplinaire pour lancer une nouvelle gamme de produits, contribuant à une augmentation de 15% du chiffre d'affaires global."
+        }
+      }
+    },
+    "studies": {
+      "title": "Formation",
+      "institutions": {
+        "Université de Jakarta": {
+          "description": "Études en génie logiciel."
+        },
+        "Build the Future": {
+          "description": "Formation en marketing digital et personal branding."
+        }
+      }
+    },
+    "technical": {
+      "title": "Compétences techniques",
+      "skills": {
+        "Figma": {
+          "description": "Capable de prototyper dans Figma avec Once UI à une vitesse exceptionnelle."
+        },
+        "Nextjs": {
+          "description": "Construction d'applications nouvelle génération avec Next.js + Once UI + Supabase."
+        }
+      }
+    }
+  },
+  "blog": {
+    "label": "Blog",
+    "title": "Écrits sur le design et la tech...",
+    "description": "Découvrez les dernières actualités de {name}"
+  },
+  "work": {
+    "label": "Travaux",
+    "title": "Mes projets",
+    "description": "Projets de design et développement par {name}"
+  },
+  "gallery": {
+    "label": "Galerie",
+    "title": "Ma galerie photo",
+    "description": "Une collection de photos par {name}"
+  },
+  "projectCard": {
+    "label": "Lire l'étude de cas"
+  }
+}
