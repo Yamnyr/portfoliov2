@@ -15,3 +15,13 @@
         align-self: center;
     }
 }
+
+.stickyAvatar {
+
+    @media (min-width: 768px) {
+        position: sticky;
+        top: 24px;
+        height: fit-content;
+        align-self: flex-start;
+    }
+}
