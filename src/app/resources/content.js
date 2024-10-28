@@ -146,7 +146,19 @@ const about = {
                 images: [
                     {
                         src: '/images/studies/iut.png',
-                        alt: 'IPSSI Logo',
+                        alt: 'iut Logo',
+                        width: 4,
+                        height: 4
+                    }
+                ]
+            },
+            {
+                name: 'BTS SIO option SLAM',
+                description: <>Lycée Franklin Roosevelt</>,
+                images: [
+                    {
+                        src: '/images/studies/franklin-roosevelt.jpg',
+                        alt: 'Franklin Roosevelt Logo',
                         width: 4,
                         height: 4
                     }
