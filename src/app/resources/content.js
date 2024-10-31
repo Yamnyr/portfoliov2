@@ -91,12 +91,12 @@ const about = {
                     <>développement d'un outil de gestion de projets adaptés a l'entreprise</>,
                 ],
                 images: [
-                    // {
-                    //     src: '/images/projects/DropIt/cover-01.jpg',
-                    //     alt: 'Once UI Project',
-                    //     width: 16,
-                    //     height: 9
-                    // }
+                    {
+                        src: '/images/experiences/dfb.png',
+                        alt: 'Once UI Project',
+                        width: 4,
+                        height: 4
+                    }
                 ]
             },
             {
@@ -108,7 +108,14 @@ const about = {
                     <>Création, modification de scripts en PHP / JS</>,
                     <>réalisation de plugins Wordpress</>,
                 ],
-                images: [ ]
+                images: [
+                    {
+                        src: '/images/experiences/netcreative.png',
+                        alt: 'Once UI Project',
+                        width: 4,
+                        height: 4
+                    }
+                ]
             }
         ]
     },

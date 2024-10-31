@@ -243,62 +243,84 @@ export default function About(
                                         <Flex
                                             key={`${experience.company}-${experience.role}-${index}`}
                                             fillWidth
-                                            direction="column">
-                                            <Flex
-                                                fillWidth
-                                                justifyContent="space-between"
-                                                alignItems="flex-end"
-                                                marginBottom="4">
-                                                <Text
-                                                    id={experience.company}
-                                                    variant="heading-strong-l">
-                                                    {experience.company}
-                                                </Text>
-                                                <Text
-                                                    variant="heading-default-xs"
-                                                    onBackground="neutral-weak">
-                                                    {experience.timeframe}
-                                                </Text>
-                                            </Flex>
-                                            <Text
-                                                variant="body-default-s"
-                                                onBackground="brand-weak"
-                                                marginBottom="m">
-                                                {experience.role}
-                                            </Text>
-                                            <Flex
-                                                as="ul"
-                                                direction="column" gap="16">
-                                                {experience.achievements.map((achievement: string, index: any) => (
-                                                    <Text
-                                                        as="li"
-                                                        variant="body-default-m"
-                                                        key={`${experience.company}-${index}`}>
-                                                        {achievement}
-                                                    </Text>
-                                                ))}
-                                            </Flex>
-                                            {experience.images.length > 0 && (
+                                            gap="4"
+                                            direction="row">
+                                            {experience.images && experience.images.length > 0 && (
                                                 <Flex
-                                                    fillWidth paddingTop="m" paddingLeft="40"
-                                                    wrap>
-                                                    {experience.images.map((image, index) => (
-                                                        <Flex
-                                                            key={index}
-                                                            border="neutral-medium"
-                                                            borderStyle="solid-1"
-                                                            radius="m"
-                                                            minWidth={image.width} height={image.height}>
-                                                            <SmartImage
-                                                                enlarge
-                                                                radius="m"
-                                                                sizes={image.width.toString()}
-                                                                alt={image.alt}
-                                                                src={image.src}/>
-                                                        </Flex>
-                                                    ))}
+                                                    border="neutral-medium"
+                                                    radius="m"
+                                                    minWidth={experience.images[0].width}
+                                                    height={experience.images[0].height}>
+                                                    <SmartImage
+                                                        enlarge
+                                                        radius="m"
+                                                        sizes={experience.images[0].width.toString()}
+                                                        alt={experience.images[0].alt}
+                                                        src={experience.images[0].src}/>
                                                 </Flex>
                                             )}
+                                            <Flex
+                                                marginLeft="20"
+                                                direction="column"
+                                                fillWidth>
+                                                <Flex
+                                                    fillWidth
+                                                    justifyContent="space-between"
+                                                    alignItems="flex-end"
+                                                    marginBottom="4">
+                                                    <Text
+                                                        id={experience.company}
+                                                        variant="heading-strong-l">
+                                                        {experience.company}
+                                                    </Text>
+                                                    <Text
+                                                        variant="heading-default-xs"
+                                                        onBackground="neutral-weak">
+                                                        {experience.timeframe}
+                                                    </Text>
+                                                </Flex>
+                                                <Text
+                                                    variant="body-default-s"
+                                                    onBackground="brand-weak"
+                                                    marginBottom="m">
+                                                    {experience.role}
+                                                </Text>
+                                                <Flex
+                                                    as="ul"
+                                                    direction="column" gap="16">
+                                                    {experience.achievements.map((achievement: string, index: any) => (
+                                                        <Text
+                                                            as="li"
+                                                            variant="body-default-m"
+                                                            key={`${experience.company}-${index}`}>
+                                                            {achievement}
+                                                        </Text>
+                                                    ))}
+                                                </Flex>
+                                                {experience.images && experience.images.length > 1 && (
+                                                    <Flex
+                                                        fillWidth paddingTop="m"
+                                                        wrap gap="12">
+                                                        {experience.images.slice(1).map((image, imgIndex) => (
+                                                            <Flex
+                                                                key={imgIndex}
+                                                                border="neutral-medium"
+                                                                borderStyle="solid-1"
+                                                                radius="m"
+                                                                marginBottom="20"
+                                                                minWidth={image.width}
+                                                                height={image.height}>
+                                                                <SmartImage
+                                                                    enlarge
+                                                                    radius="m"
+                                                                    sizes={image.width.toString()}
+                                                                    alt={image.alt}
+                                                                    src={image.src}/>
+                                                            </Flex>
+                                                        ))}
+                                                    </Flex>
+                                                )}
+                                            </Flex>
                                         </Flex>
                                     ))}
                                 </Flex>
