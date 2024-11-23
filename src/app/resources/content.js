@@ -227,6 +227,48 @@ const about = {
                 ]
             },
             {
+                title: 'Git',
+                description: <>Contrôle de version et développement collaboratif avec Git et GitHub.</>,
+                images: [
+                    {
+                        src: '/images/competences/git.png',
+                        alt: 'git',
+                        width: 4,
+                        height: 4
+                    },
+                    {
+                        src: '/images/competences/gitlab.png',
+                        alt: 'gitlab',
+                        width: 4,
+                        height: 4
+                    },
+                    {
+                        src: '/images/competences/github.png',
+                        alt: 'github',
+                        width: 4,
+                        height: 4
+                    }
+                ]
+            },
+            {
+                title: 'MySQL/PostgreSQL',
+                description: <>Gestion de bases de données relationnelles avec requêtes avancées et optimisation.</>,
+                images: [
+                    {
+                        src: '/images/competences/postgresql.png',
+                        alt: 'postgresql',
+                        width: 4,
+                        height: 4
+                    },
+                    {
+                        src: '/images/competences/mysql.png',
+                        alt: 'mysql',
+                        width: 4,
+                        height: 4
+                    }
+                ]
+            },
+            {
                 title: 'Symfony',
                 description: <>Création d'applications PHP robustes avec le Framework Symfony et Doctrine ORM.</>,
                 images: [
@@ -330,48 +372,6 @@ const about = {
                     {
                         src: '/images/competences/figma.png',
                         alt: 'figma',
-                        width: 4,
-                        height: 4
-                    }
-                ]
-            },
-            {
-                title: 'MySQL/PostgreSQL',
-                description: <>Gestion de bases de données relationnelles avec requêtes avancées et optimisation.</>,
-                images: [
-                    {
-                        src: '/images/competences/postgresql.png',
-                        alt: 'postgresql',
-                        width: 4,
-                        height: 4
-                    },
-                    {
-                        src: '/images/competences/mysql.png',
-                        alt: 'mysql',
-                        width: 4,
-                        height: 4
-                    }
-                ]
-            },
-            {
-                title: 'Git',
-                description: <>Contrôle de version et développement collaboratif avec Git et GitHub.</>,
-                images: [
-                    {
-                        src: '/images/competences/git.png',
-                        alt: 'git',
-                        width: 4,
-                        height: 4
-                    },
-                    {
-                        src: '/images/competences/gitlab.png',
-                        alt: 'gitlab',
-                        width: 4,
-                        height: 4
-                    },
-                    {
-                        src: '/images/competences/github.png',
-                        alt: 'github',
                         width: 4,
                         height: 4
                     }

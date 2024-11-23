@@ -399,7 +399,7 @@ export default function About(
                                             fillWidth
                                             direction="column"
                                             gap="4">
-                                            {skill.images && skill.images.length > 0 && skill.images.length <= 3 ? (
+                                            {skill.images && skill.images.length > 0 && skill.images.length <= 1 ? (
                                                 // Layout horizontal pour 1 à 3 images
                                                 <Flex direction="row" gap="4" fillWidth>
                                                     <Flex direction="row" gap="4">
@@ -444,7 +444,7 @@ export default function About(
                                                         onBackground="neutral-weak">
                                                         {skill.description}
                                                     </Text>
-                                                    {skill.images && skill.images.length > 3 && (
+                                                    {skill.images && skill.images.length > 1 && (
                                                         <Flex
                                                             fillWidth
                                                             paddingTop="m"
