@@ -366,6 +366,18 @@ const about = {
                 ]
             },
             {
+                title: 'Docker',
+                description: <>Conteneurisation d'applications pour des déploiements rapides et efficaces avec Docker.</>,
+                images: [
+                    {
+                        src: '/images/competences/docker.png',
+                        alt: 'Docker',
+                        width: 4,
+                        height: 4
+                    }
+                ]
+            },
+            {
                 title: 'Figma',
                 description: <>Conception d'interfaces utilisateur modernes et création de prototypes interactifs.</>,
                 images: [
