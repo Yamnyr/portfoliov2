@@ -379,7 +379,7 @@ const about = {
             },
             {
                 title: 'Figma',
-                description: <>Conception d'interfaces utilisateur modernes et création de prototypes interactifs.</>,
+                description: <>Création et gestion de conteneurs pour simplifier le déploiement des applications.</>,
                 images: [
                     {
                         src: '/images/competences/figma.png',
