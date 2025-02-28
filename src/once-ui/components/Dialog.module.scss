@@ -1,14 +1,6 @@
 .overlay {
-    position: fixed;
     opacity: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9;
-    background-color: var(--backdrop);
     visibility: hidden;
-    transition: var(--transition-property) var(--transition-duration-macro-medium) var(--transition-timing-function);
 
     &.open {
         opacity: 1;
@@ -17,11 +9,10 @@
 }
 
 .dialog {
+    max-width: 40rem;
+    max-height: 100%;
     transform: scale(0.2);
     opacity: 0;
-    box-shadow: var(--shadow-xl);
-    max-width: 40rem;
-    transition: var(--transition-property) var(--transition-duration-macro-medium) var(--transition-timing-function);
 
     &.open {
         transform: scale(1);
@@ -31,10 +22,9 @@
 
     @media (--m) {
         position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        max-width: 100%;
-        border-radius: var(--radius-l) var(--radius-l) 0 0;
+        bottom: var(--static-space-8);
+        left: var(--static-space-8);
+        right: var(--static-space-8);
+        max-width: calc(100% - var(--static-space-16)) !important;
     }
 }

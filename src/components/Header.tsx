@@ -1,167 +1,163 @@
 "use client";
 
-import { useParams } from "next/navigation";
-import { useEffect, useState, useTransition } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
-import { Flex, ToggleButton } from "@/once-ui/components"
-import styles from '@/components/Header.module.scss'
+import { Fade, Flex, Line, ToggleButton } from "@/once-ui/components";
+import styles from "@/components/Header.module.scss";
 
-import { routes, display } from '@/app/resources'
-
-import { routing } from '@/i18n/routing';
-import { Locale, usePathname, useRouter } from '@/i18n/routing';
-import { renderContent } from "@/app/resources";
-import { useTranslations } from "next-intl";
-import { i18n } from "@/app/resources/config";
+import { routes, display } from "@/app/resources";
+import { person, home, about, blog, work, gallery } from "@/app/resources/content";
 
 type TimeDisplayProps = {
-    timeZone: string;
-    locale?: string;  // Optionally allow locale, defaulting to 'en-GB'
+  timeZone: string;
+  locale?: string; // Optionally allow locale, defaulting to 'en-GB'
 };
 
-const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = 'en-GB' }) => {
-    const [currentTime, setCurrentTime] = useState('');
+const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
+  const [currentTime, setCurrentTime] = useState("");
 
-    useEffect(() => {
-        const updateTime = () => {
-            const now = new Date();
-            const options: Intl.DateTimeFormatOptions = {
-                timeZone,
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: false,
-            };
-            const timeString = new Intl.DateTimeFormat(locale, options).format(now);
-            setCurrentTime(timeString);
-        };
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const options: Intl.DateTimeFormatOptions = {
+        timeZone,
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+      };
+      const timeString = new Intl.DateTimeFormat(locale, options).format(now);
+      setCurrentTime(timeString);
+    };
 
-        updateTime();
-        const intervalId = setInterval(updateTime, 1000);
+    updateTime();
+    const intervalId = setInterval(updateTime, 1000);
 
-        return () => clearInterval(intervalId);
-    }, [timeZone, locale]);
+    return () => clearInterval(intervalId);
+  }, [timeZone, locale]);
 
-    return (
-        <>
-            {currentTime}
-        </>
-    );
+  return <>{currentTime}</>;
 };
 
 export default TimeDisplay;
 
 export const Header = () => {
-    const router = useRouter();
-    const [isPending, startTransition] = useTransition();
-    const pathname = usePathname() ?? '';
-    const params = useParams();
+  const pathname = usePathname() ?? "";
 
-    function handleLanguageChange(locale: string) {
-        const nextLocale = locale as Locale;
-        startTransition(() => {
-            router.replace(
-                pathname,
-                {locale: nextLocale}
-            )
-        })
-    }
-
-    const t = useTranslations();
-    const { person, home, about, blog, work, gallery } = renderContent(t);
-
-    return (
-        <Flex style={{height: 'fit-content'}}
-              className={styles.position}
-              as="header"
-              zIndex={9}
-              fillWidth padding="8"
-              justifyContent="center">
-            <Flex
-                hide="s"
-                paddingLeft="12" fillWidth
-                alignItems="center"
-                textVariant="body-default-s">
-                { display.location && (
-                    <>{person.location}</>
-                )}
-            </Flex>
-            <Flex
-                background="surface" border="neutral-medium" borderStyle="solid-1" radius="m-4" shadow="l"
-                padding="4"
-                justifyContent="center">
-                <Flex
-                    gap="4"
-                    textVariant="body-default-s">
-                    { routes['/'] && (
-                        <ToggleButton
-                            prefixIcon="home"
-                            href={`/${params?.locale}`}
-                            selected={pathname === "/"}>
-                            <Flex paddingX="2" hide="s">{home.label}</Flex>
-                        </ToggleButton>
-                    )}
-                    { routes['/about'] && (
-                        <ToggleButton
-                            prefixIcon="person"
-                            href={`/${params?.locale}/about`}
-                            selected={pathname === "/about"}>
-                            <Flex paddingX="2" hide="s">{about.label}</Flex>
-                        </ToggleButton>
-                    )}
-                    { routes['/work'] && (
-                        <ToggleButton
-                            prefixIcon="grid"
-                            href={`/${params?.locale}/work`}
-                            selected={pathname.startsWith('/work')}>
-                            <Flex paddingX="2" hide="s">{work.label}</Flex>
-                        </ToggleButton>
-                    )}
-                    { routes['/blog'] && (
-                        <ToggleButton
-                            prefixIcon="book"
-                            href={`/${params?.locale}/blog`}
-                            selected={pathname.startsWith('/blog')}>
-                            <Flex paddingX="2" hide="s">{blog.label}</Flex>
-                        </ToggleButton>
-                    )}
-                    { routes['/gallery'] && (
-                        <ToggleButton
-                            prefixIcon="gallery"
-                            href={`/${params?.locale}/gallery`}
-                            selected={pathname.startsWith('/gallery')}>
-                            <Flex paddingX="2" hide="s">{gallery.label}</Flex>
-                        </ToggleButton>
-                    )}
-                </Flex>
-            </Flex>
-            <Flex
-                paddingRight="12" fillWidth
-                justifyContent="flex-end" alignItems="center"
-                textVariant="body-default-s"
-                gap="20">
-                {routing.locales.length > 1 && <Flex
-                    background="surface" border="neutral-medium" borderStyle="solid-1" radius="m-4" shadow="l"
-                    padding="4" gap="2"
-                    justifyContent="center">
-                    {i18n && routing.locales.map((locale, index) => (
-                        <ToggleButton
-                            key={index}
-                            selected={params?.locale === locale}
-                            onClick={() => handleLanguageChange(locale)}
-                            className={isPending && 'pointer-events-none opacity-60' || ''}
-                        >
-                            {locale.toUpperCase()}
-                        </ToggleButton>
-                    ))}
-                </Flex>
-                }
-                <Flex hide="s">
-                    { display.time && (
-                        <TimeDisplay timeZone={person.location}/>
-                    )}
-                </Flex>
-            </Flex>
+  return (
+    <>
+      <Fade hide="s" fillWidth position="fixed" height="80" zIndex={9} />
+      <Fade show="s" fillWidth position="fixed" bottom="0" to="top" height="80" zIndex={9} />
+      <Flex
+        fitHeight
+        className={styles.position}
+        as="header"
+        zIndex={9}
+        fillWidth
+        padding="8"
+        horizontal="center"
+      >
+        <Flex paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
+          {display.location && <Flex hide="s">{person.location}</Flex>}
         </Flex>
-    )
-}
+        <Flex fillWidth horizontal="center">
+          <Flex
+            background="surface"
+            border="neutral-medium"
+            radius="m-4"
+            shadow="l"
+            padding="4"
+            horizontal="center"
+          >
+            <Flex gap="4" vertical="center" textVariant="body-default-s">
+              {routes["/"] && (
+                <ToggleButton prefixIcon="home" href="/" selected={pathname === "/"} />
+              )}
+              <Line vert maxHeight="24" />
+              {routes["/about"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="person"
+                    href="/about"
+                    label={about.label}
+                    selected={pathname === "/about"}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="person"
+                    href="/about"
+                    selected={pathname === "/about"}
+                  />
+                </>
+              )}
+              {routes["/work"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="grid"
+                    href="/work"
+                    label={work.label}
+                    selected={pathname.startsWith("/work")}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="grid"
+                    href="/work"
+                    selected={pathname.startsWith("/work")}
+                  />
+                </>
+              )}
+              {routes["/blog"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="book"
+                    href="/blog"
+                    label={blog.label}
+                    selected={pathname.startsWith("/blog")}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="book"
+                    href="/blog"
+                    selected={pathname.startsWith("/blog")}
+                  />
+                </>
+              )}
+              {routes["/gallery"] && (
+                <>
+                  <ToggleButton
+                    className="s-flex-hide"
+                    prefixIcon="gallery"
+                    href="/gallery"
+                    label={gallery.label}
+                    selected={pathname.startsWith("/gallery")}
+                  />
+                  <ToggleButton
+                    className="s-flex-show"
+                    prefixIcon="gallery"
+                    href="/gallery"
+                    selected={pathname.startsWith("/gallery")}
+                  />
+                </>
+              )}
+            </Flex>
+          </Flex>
+        </Flex>
+        <Flex fillWidth horizontal="end" vertical="center">
+          <Flex
+            paddingRight="12"
+            horizontal="end"
+            vertical="center"
+            textVariant="body-default-s"
+            gap="20"
+          >
+            <Flex hide="s">{display.time && <TimeDisplay timeZone={person.location} />}</Flex>
+          </Flex>
+        </Flex>
+      </Flex>
+    </>
+  );
+};
