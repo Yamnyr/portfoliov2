@@ -245,8 +245,9 @@ export default function About() {
                           <Flex
                               fillWidth
                               // justifyContent="space-between"
-                              alignItems="flex-end"
-                              marginBottom="4">
+                              // alignItems="flex-end"
+                              marginBottom="4"
+                          >
                             <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
                               <Text id={experience.company} variant="heading-strong-l">
                                 {experience.company}
