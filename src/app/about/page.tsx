@@ -244,7 +244,7 @@ export default function About() {
                             fillWidth>
                           <Flex
                               fillWidth
-                              justifyContent="space-between"
+                              // justifyContent="space-between"
                               alignItems="flex-end"
                               marginBottom="4">
                             <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
