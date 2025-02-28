@@ -212,95 +212,58 @@ export default function About() {
             )}
 
             {about.work.display && (
-              <>
-                <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
-                  {about.work.title}
-                </Heading>
-                <Flex
-                    direction="column"
-                    fillWidth gap="l" marginBottom="40">
-                  {about.work.experiences.map((experience, index) => (
-                      <Flex
-                          key={`${experience.company}-${experience.role}-${index}`}
-                          fillWidth
-                          gap="4"
-                          direction="row">
-                        {experience.images && experience.images.length > 0 && (
-                            <Flex
-                                radius="m"
-                                minWidth={experience.images[0].width}
-                                height={experience.images[0].height}>
-                              <SmartImage
-                                  enlarge
-                                  radius="m"
-                                  sizes={experience.images[0].width.toString()}
-                                  alt={experience.images[0].alt}
-                                  src={experience.images[0].src}/>
+                <>
+                  <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
+                    {about.work.title}
+                  </Heading>
+                  <Column fillWidth gap="l" marginBottom="40">
+                    {about.work.experiences.map((experience, index) => (
+                        <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
+                          <Flex fillWidth horizontal="space-between" vertical="center" marginBottom="16">
+                            {/* Nouvelle disposition */}
+                            <Flex horizontal alignItems="center" gap="16">
+                              {/* Affichage de l'image si disponible */}
+                              {experience.images.length > 0 && (
+                                  <Flex radius="m">
+                                    <SmartImage
+                                        enlarge
+                                        radius="m"
+                                        sizes={experience.images[0].width.toString()}
+                                        alt={experience.images[0].alt}
+                                        src={experience.images[0].src}
+                                        width={experience.images[0].width}
+                                        height={experience.images[0].height}
+                                    />
+                                  </Flex>
+                              )}
+                              {/* Nom de l'entreprise et rôle */}
+                              <Column>
+                                <Text id={experience.company} variant="heading-strong-l">
+                                  {experience.company}
+                                </Text>
+                                <Text variant="body-default-s" onBackground="brand-weak">
+                                  {experience.role}
+                                </Text>
+                              </Column>
                             </Flex>
-                        )}
-                        <Flex
-                            marginLeft="20"
-                            direction="column"
-                            fillWidth>
-                          <Flex
-                              fillWidth
-                              // justifyContent="space-between"
-                              // alignItems="flex-end"
-                              marginBottom="4"
-                          >
-                            <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
-                              <Text id={experience.company} variant="heading-strong-l">
-                                {experience.company}
-                              </Text>
-                              <Text variant="heading-default-xs" onBackground="neutral-weak">
-                                {experience.timeframe}
-                              </Text>
-                            </Flex>
+                            {/* Date alignée à droite */}
+                            <Text variant="heading-default-xs" onBackground="neutral-weak">
+                              {experience.timeframe}
+                            </Text>
                           </Flex>
-                          <Text
-                              variant="body-default-s"
-                              onBackground="brand-weak"
-                              marginBottom="m">
-                            {experience.role}
-                          </Text>
-                          <Flex
-                              as="ul"
-                              direction="column" gap="16">
-                            {experience.achievements.map((achievement: string, index: any) => (
-                                <Text
-                                    as="li"
-                                    variant="body-default-m"
-                                    key={`${experience.company}-${index}`}>
+
+                          {/* Liste des réalisations */}
+                          <Column as="ul" gap="16">
+                            {experience.achievements.map((achievement: JSX.Element, index: number) => (
+                                <Text as="li" variant="body-default-m" key={`${experience.company}-${index}`}>
                                   {achievement}
                                 </Text>
                             ))}
-                          </Flex>
-                          {experience.images && experience.images.length > 1 && (
-                              <Flex
-                                  fillWidth paddingTop="m"
-                                  wrap gap="12">
-                                {experience.images.slice(1).map((image, imgIndex) => (
-                                    <Flex
-                                        key={imgIndex}
-                                        radius="m"
-                                        marginBottom="20"
-                                        minWidth={image.width}
-                                        height={image.height}>
-                                      <SmartImage
-                                          enlarge
-                                          radius="m"
-                                          sizes={image.width.toString()}
-                                          alt={image.alt}
-                                          src={image.src}/>
-                                    </Flex>
-                                ))}
-                              </Flex>
-                          )}
-                        </Flex>
-                      </Flex>
-                  ))}
-                </Flex>
-              </>
+                          </Column>
+                        </Column>
+                    ))}
+                  </Column>
+                </>
             )}
 
             { about.studies.display && (
