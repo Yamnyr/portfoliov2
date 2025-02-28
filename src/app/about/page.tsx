@@ -227,7 +227,6 @@ export default function About() {
                           direction="row">
                         {experience.images && experience.images.length > 0 && (
                             <Flex
-                                border=""
                                 radius="m"
                                 minWidth={experience.images[0].width}
                                 height={experience.images[0].height}>
@@ -282,8 +281,6 @@ export default function About() {
                                 {experience.images.slice(1).map((image, imgIndex) => (
                                     <Flex
                                         key={imgIndex}
-                                        border=""
-                                        borderStyle=""
                                         radius="m"
                                         marginBottom="20"
                                         minWidth={image.width}
@@ -325,7 +322,6 @@ export default function About() {
                             direction="row">
                           {institution.images && institution.images.length > 0 && (
                               <Flex
-                                  border=""
                                   radius="m"
                                   minWidth={institution.images[0].width}
                                   height={institution.images[0].height}>
@@ -384,7 +380,6 @@ export default function About() {
                                   {skill.images.map((image, imgIndex) => (
                                       <Flex
                                           key={imgIndex}
-                                          border=""
                                           radius="m"
                                           marginRight="8"
                                           minWidth={image.width}
@@ -432,7 +427,6 @@ export default function About() {
                                           <Flex
                                               marginBottom="20"
                                               key={imgIndex}
-                                              border=""
                                               radius="m"
                                               minWidth={image.width}
                                               height={image.height}>
