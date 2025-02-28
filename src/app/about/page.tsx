@@ -104,7 +104,7 @@ export default function About() {
         </Column>
       )}
 
-      <RevealFx translateY="10">
+      <RevealFx translateY="12">
         <Flex fillWidth mobileDirection="column" horizontal="center">
           {about.avatar.display && (
             <Column
