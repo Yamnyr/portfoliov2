@@ -103,7 +103,7 @@ const about = {
         images: [
           {
             src: '/images/experiences/dfb.png',
-            alt: 'Once UI Project',
+            alt: 'DFB',
             width: 4,
             height: 4
           }
@@ -121,7 +121,25 @@ const about = {
         images: [
           {
             src: '/images/experiences/netcreative.png',
-            alt: 'Once UI Project',
+            alt: 'Netcreative',
+            width: 4,
+            height: 4
+          }
+        ]
+      },
+      {
+        company: 'Anetsys',
+        timeframe: '2022',
+        role: 'Developpeur web',
+        achievements: [
+          <>Développement de scripts php pour une interface rest api</>,
+          <>Création de documentations complètes/ schéma / algorigramme afin de présenter le projet réalisé durant ce stage</>,
+          <>Développement sous wordpress</>,
+        ],
+        images: [
+          {
+            src: '/images/experiences/anetsys.png',
+            alt: 'Anetsys',
             width: 4,
             height: 4
           }
@@ -275,6 +293,12 @@ const about = {
             alt: 'mysql',
             width: 4,
             height: 4
+          },
+          {
+            src: '/images/competences/mongodb.png',
+            alt: 'MongoDB',
+            width: 4,
+            height: 4
           }
         ]
       },
@@ -394,6 +418,18 @@ const about = {
           {
             src: '/images/competences/figma.png',
             alt: 'figma',
+            width: 4,
+            height: 4
+          }
+        ]
+      },
+      {
+        title: 'Streamlit',
+        description: <>Développement rapide d’applications web interactives pour la data science.</>,
+        images: [
+          {
+            src: '/images/competences/streamlit.png',
+            alt: 'Streamlit',
             width: 4,
             height: 4
           }

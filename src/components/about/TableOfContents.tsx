@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Column, Flex, Text } from "@/once-ui/components";
+import {Column, Flex, RevealFx, Text} from "@/once-ui/components";
 import styles from "./about.module.scss";
 
 interface TableOfContentsProps {
@@ -50,37 +50,40 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ structure, about }) =
       {structure
         .filter((section) => section.display)
         .map((section, sectionIndex) => (
-          <Column key={sectionIndex} gap="12">
-            <Flex
-              cursor="interactive"
-              className={styles.hover}
-              gap="8"
-              vertical="center"
-              onClick={() => scrollTo(section.title, 80)}
-            >
-              <Flex height="1" minWidth="16" background="neutral-strong"></Flex>
-              <Text>{section.title}</Text>
-            </Flex>
-            {about.tableOfContent.subItems && (
-              <>
-                {section.items.map((item, itemIndex) => (
-                  <Flex
-                    hide="l"
-                    key={itemIndex}
-                    style={{ cursor: "pointer" }}
-                    className={styles.hover}
-                    gap="12"
-                    paddingLeft="24"
-                    vertical="center"
-                    onClick={() => scrollTo(item, 80)}
-                  >
-                    <Flex height="1" minWidth="8" background="neutral-strong"></Flex>
-                    <Text>{item}</Text>
-                  </Flex>
-                ))}
-              </>
-            )}
-          </Column>
+
+          <RevealFx  delay={0.4} translateY="8" fillWidth horizontal="start" paddingBottom="m">
+            <Column key={sectionIndex} gap="12">
+              <Flex
+                cursor="interactive"
+                className={styles.hover}
+                gap="8"
+                vertical="center"
+                onClick={() => scrollTo(section.title, 80)}
+              >
+                <Flex height="1" minWidth="16" background="neutral-strong"></Flex>
+                <Text>{section.title}</Text>
+              </Flex>
+              {about.tableOfContent.subItems && (
+                <>
+                  {section.items.map((item, itemIndex) => (
+                    <Flex
+                      hide="l"
+                      key={itemIndex}
+                      style={{ cursor: "pointer" }}
+                      className={styles.hover}
+                      gap="12"
+                      paddingLeft="24"
+                      vertical="center"
+                      onClick={() => scrollTo(item, 80)}
+                    >
+                      <Flex height="1" minWidth="8" background="neutral-strong"></Flex>
+                      <Text>{item}</Text>
+                    </Flex>
+                  ))}
+                </>
+              )}
+            </Column>
+          </RevealFx>
         ))}
     </Column>
   );

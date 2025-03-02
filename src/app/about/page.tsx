@@ -5,7 +5,7 @@ import {
   Flex,
   Heading,
   Icon,
-  IconButton,
+  IconButton, RevealFx,
   SmartImage,
   Tag,
   Text,
@@ -103,6 +103,8 @@ export default function About() {
               <TableOfContents structure={structure} about={about} />
             </Column>
         )}
+
+        <RevealFx translateY="12" fillWidth horizontal="start" paddingBottom="m">
         <Flex fillWidth mobileDirection="column" horizontal="center">
           {about.avatar.display && (
               <Column
@@ -217,58 +219,61 @@ export default function About() {
                   <Column fillWidth gap="l" marginBottom="40">
                     {about.work.experiences.map((experience, index) => (
                         <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
-                          <Flex fillWidth horizontal="space-between" vertical="end" marginBottom="4">
-                            <Text id={experience.company} variant="heading-strong-l">
-                              {experience.company}
-                            </Text>
+                          <Flex fillWidth horizontal="space-between" vertical="center" marginBottom="4">
+                            {/* Conteneur image + infos entreprise */}
+                            <Flex horizontal="start" gap="m">
+                              {/* Image de l'entreprise avec un espace sous elle */}
+                              {experience.images.length > 0 && (
+                                  <Flex
+                                      marginBottom="s"
+                                      // border="neutral-medium"
+                                      radius="m"
+                                      direction="column"
+                                      //@ts-ignore
+                                      minWidth={experience.images[0].width}
+                                      //@ts-ignore
+                                      height={experience.images[0].height}
+                                  >
+                                    <SmartImage
+                                        enlarge
+                                        radius="m"
+                                        //@ts-ignore
+                                        sizes={experience.images[0].width.toString()}
+                                        //@ts-ignore
+                                        alt={experience.images[0].alt}
+                                        //@ts-ignore
+                                        src={experience.images[0].src}
+                                    />
+                                  </Flex>
+                              )}
+                              {/* Informations entreprise et rôle */}
+                              <Flex direction="column">
+                                <Text id={experience.company} variant="heading-strong-l">
+                                  {experience.company}
+                                </Text>
+                                <Text variant="body-default-s" onBackground="brand-weak">
+                                  {experience.role}
+                                </Text>
+                              </Flex>
+                            </Flex>
+                            {/* Timeframe complètement à droite */}
                             <Text variant="heading-default-xs" onBackground="neutral-weak">
                               {experience.timeframe}
                             </Text>
                           </Flex>
-                          <Text variant="body-default-s" onBackground="brand-weak" marginBottom="m">
-                            {experience.role}
-                          </Text>
+                          {/* Liste des achievements */}
                           <Column as="ul" gap="16">
                             {experience.achievements.map((achievement: JSX.Element, index: number) => (
-                                <Text
-                                    as="li"
-                                    variant="body-default-m"
-                                    key={`${experience.company}-${index}`}
-                                >
+                                <Text as="li" variant="body-default-m" key={`${experience.company}-${index}`}>
                                   {achievement}
                                 </Text>
                             ))}
                           </Column>
-                          {experience.images.length > 0 && (
-                              <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
-                                {experience.images.map((image, index) => (
-                                    <Flex
-                                        key={index}
-                                        border="neutral-medium"
-                                        radius="m"
-                                        //@ts-ignore
-                                        minWidth={image.width}
-                                        //@ts-ignore
-                                        height={image.height}
-                                    >
-                                      <SmartImage
-                                          enlarge
-                                          radius="m"
-                                          //@ts-ignore
-                                          sizes={image.width.toString()}
-                                          //@ts-ignore
-                                          alt={image.alt}
-                                          //@ts-ignore
-                                          src={image.src}
-                                      />
-                                    </Flex>
-                                ))}
-                              </Flex>
-                          )}
                         </Column>
                     ))}
                   </Column>
                 </>
+
             )}
 
             {about.studies.display && (
@@ -278,18 +283,45 @@ export default function About() {
                   </Heading>
                   <Column fillWidth gap="l" marginBottom="40">
                     {about.studies.institutions.map((institution, index) => (
-                        <Column key={`${institution.name}-${index}`} fillWidth gap="4">
-                          <Text id={institution.name} variant="heading-strong-l">
-                            {institution.name}
-                          </Text>
-                          <Text variant="heading-default-xs" onBackground="neutral-weak">
-                            {institution.description}
-                          </Text>
-                        </Column>
+                        <Flex key={`${institution.name}-${index}`} fillWidth horizontal="start" vertical="center" gap="m">
+                          {/* Image de l'établissement */}
+                          {institution.images.length > 0 && (
+                              <Flex
+                                  // border="neutral-medium"
+                                  radius="m"
+                                  direction="column"
+                                  //@ts-ignore
+                                  minWidth={institution.images[0].width} // Ajustement de la taille
+                                  //@ts-ignore
+                                  height={institution.images[0].height}
+                              >
+                                <SmartImage
+                                    enlarge
+                                    radius="m"
+                                    //@ts-ignore
+                                    sizes={(institution.images[0].width * 10).toString()}
+                                    //@ts-ignore
+                                    alt={institution.images[0].alt}
+                                    //@ts-ignore
+                                    src={institution.images[0].src}
+                                />
+                              </Flex>
+                          )}
+                          {/* Informations établissement */}
+                          <Column gap="4">
+                            <Text id={institution.name} variant="heading-strong-l">
+                              {institution.name}
+                            </Text>
+                            <Text variant="heading-default-xs" onBackground="neutral-weak">
+                              {institution.description}
+                            </Text>
+                          </Column>
+                        </Flex>
                     ))}
                   </Column>
                 </>
             )}
+
 
             {about.technical.display && (
                 <>
@@ -304,43 +336,81 @@ export default function About() {
                   <Column fillWidth gap="l">
                     {about.technical.skills.map((skill, index) => (
                         <Column key={`${skill}-${index}`} fillWidth gap="4">
-                          <Text variant="heading-strong-l">{skill.title}</Text>
-                          <Text variant="body-default-m" onBackground="neutral-weak">
-                            {skill.description}
-                          </Text>
-                          {skill.images && skill.images.length > 0 && (
-                              <Flex fillWidth paddingTop="m" gap="12" wrap>
-                                {skill.images.map((image, index) => (
-                                    <Flex
-                                        key={index}
-                                        border="neutral-medium"
-                                        radius="m"
-                                        //@ts-ignore
-                                        minWidth={image.width}
-                                        //@ts-ignore
-                                        height={image.height}
-                                    >
-                                      <SmartImage
-                                          enlarge
-                                          radius="m"
-                                          //@ts-ignore
-                                          sizes={image.width.toString()}
-                                          //@ts-ignore
-                                          alt={image.alt}
-                                          //@ts-ignore
-                                          src={image.src}
-                                      />
-                                    </Flex>
-                                ))}
+                          {/* Si une seule image, on aligne à côté */}
+                          {skill.images && skill.images.length === 1 ? (
+                              <Flex fillWidth horizontal="start" vertical="center" gap="m">
+                                {/* Image unique à gauche */}
+                                <Flex
+                                    border="neutral-medium"
+                                    radius="m"
+                                    //@ts-ignore
+                                    minWidth={skill.images[0].width}
+                                    //@ts-ignore
+                                    height={skill.images[0].height}
+                                >
+                                  <SmartImage
+                                      enlarge
+                                      radius="m"
+                                      //@ts-ignore
+                                      sizes={skill.images[0].width.toString()}
+                                      //@ts-ignore
+                                      alt={skill.images[0].alt}
+                                      //@ts-ignore
+                                      src={skill.images[0].src}
+                                  />
+                                </Flex>
+                                {/* Informations skill */}
+                                <Column gap="2">
+                                  <Text variant="heading-strong-l">{skill.title}</Text>
+                                  <Text variant="body-default-m" onBackground="neutral-weak">
+                                    {skill.description}
+                                  </Text>
+                                </Column>
                               </Flex>
+                          ) : (
+                              // Si plusieurs images ou aucune, affichage classique
+                              <>
+                                <Text variant="heading-strong-l">{skill.title}</Text>
+                                <Text variant="body-default-m" onBackground="neutral-weak">
+                                  {skill.description}
+                                </Text>
+                                {skill.images && skill.images.length > 0 && (
+                                    <Flex fillWidth paddingTop="m" gap="12" wrap>
+                                      {skill.images.map((image, index) => (
+                                          <Flex
+                                              key={index}
+                                              border="neutral-medium"
+                                              radius="m"
+                                              //@ts-ignore
+                                              minWidth={image.width}
+                                              //@ts-ignore
+                                              height={image.height}
+                                          >
+                                            <SmartImage
+                                                enlarge
+                                                radius="m"
+                                                //@ts-ignore
+                                                sizes={image.width.toString()}
+                                                //@ts-ignore
+                                                alt={image.alt}
+                                                //@ts-ignore
+                                                src={image.src}
+                                            />
+                                          </Flex>
+                                      ))}
+                                    </Flex>
+                                )}
+                              </>
                           )}
                         </Column>
                     ))}
                   </Column>
                 </>
             )}
+
           </Column>
         </Flex>
+        </RevealFx>
       </Column>
   );
 }
