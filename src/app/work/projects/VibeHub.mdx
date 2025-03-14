@@ -1,0 +1,97 @@
+---
+title: "VibeHub"
+publishedAt: "2025-03-14"
+summary: "Plateforme de médias sociaux inspirée de Twitter avec reconnaissance d'expressions faciales par IA"
+images:
+  - "/images/projects/VibeHub/cover-01.jpg"
+  - "/images/projects/VibeHub/cover-02.jpg"
+team:
+  - name: "WAROQUET Quentin"
+    role: "Développeur Full Stack"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/quentin-waroquet-017008203/"
+  - name: "Marine RAPIN"
+    role: "UX/UI Designer"
+  - name: "Erwan LAUNAY"
+    role: "Développeur Backend"
+  - name: "Charles-Henri PAGNEST"
+    role: "Développeur Frontend"
+  - name: "Bruno SA E SILVA"
+    role: "Data Scientist"
+  - name: "Florian MULLER"
+    role: "DevOps Engineer"
+---
+
+## Description
+
+VibHub est une plateforme de médias sociaux développée lors d'un hackathon à l'école IPSSI. Inspirée de Twitter, cette application intègre une fonctionnalité innovante de reconnaissance d'expressions faciales en temps réel. Le projet combine les fonctionnalités classiques d'un réseau social avec une composante d'intelligence artificielle pour créer une expérience utilisateur unique.
+
+## Fonctionnalités
+
+### Plateforme de médias sociaux
+
+- **Publication de contenu** :
+  - Création et partage de tweets avec texte, images et vidéos avec filtre de post obscène via ia
+  - Support pour hashtags et mentions d'utilisateurs
+  - Options de réponse, retweet, like et marque-page
+
+- **Expérience utilisateur** :
+  - Fil d'actualité personnalisé basé sur les préférences
+  - Profils utilisateurs personnalisables
+  - Notifications en temps réel
+  - Système de recherche avancée avec filtres
+  - traduction de post via ia
+
+### Reconnaissance d'expressions faciales
+
+- **Analyse en temps réel** :
+  - Détection via la webcam de l'utilisateur
+  - Traitement par un modèle CNN de Deep Learning
+  - Reconnaissance de 7 émotions distinctes
+
+- **Catégories d'émotions identifiées** :
+  - Joie
+  - Tristesse
+  - Colère
+  - Surprise
+  - Dégoût
+  - Peur
+  - Expression neutre
+
+## Architecture technique
+
+### Frontend
+
+- **Technologies** :
+  - React.js pour l'interface utilisateur
+  - Tailwind CSS pour le design responsive
+  - Intégration WebRTC pour la capture vidéo
+
+### Backend
+
+- **Infrastructure** :
+  - Node.js avec Express.js
+  - MongoDB pour le stockage des données
+  - JWT pour l'authentification sécurisée
+
+### Module IA
+
+- **Composants** :
+  - API Flask pour la communication avec le modèle
+  - Modèle CNN entraîné pour la reconnaissance faciale
+  - Pipeline de traitement d'images en temps réel
+
+### Déploiement
+
+- **Conteneurisation** :
+  - Docker pour l'encapsulation des services
+  - Docker Compose pour l'orchestration multi-conteneurs
+  - Configuration automatisée pour le développement et la production
+
+## Points forts du projet
+
+- **Innovation** : Intégration unique de l'IA dans une plateforme sociale
+- **Architecture moderne** : Utilisation de technologies récentes et scalables
+- **Collaboration** : Développement en équipe dans un contexte de hackathon
+- **UX avancée** : Interface intuitive combinant médias sociaux et analyse d'émotions
+- **Déploiement simplifié** : Configuration Docker ready-to-run
