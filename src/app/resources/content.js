@@ -52,7 +52,7 @@ const home = {
   label: "Accueil",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio Quentin WAROQUET ${person.role}`,
-  headline: <>Developpeur we</>,
+  headline: <>Developpeur web</>,
   subline: (
       <>💻 Passionné de développement web <br/>
         🎓 Étudiant à <InlineCode>l'école IPSSI</InlineCode> en Mastère Big Data & IA <br/>
@@ -82,7 +82,7 @@ const about = {
     description: <>Je suis un développeur web passionné par la création d'applications web innovantes et performantes.
       Mon expertise s'étend du développement front-end au back-end, en passant par l'optimisation des performances et l'expérience utilisateur,
       toujours avec le souci du détail que j'ai développé à travers mes formations et mes expériences professionnels.
-      Actuellement en alternance à l'école IPSSI
+      Actuellement en alternance à l'école IPSSI en M1 développeur IA & Bigdata
 
     </>
   },
