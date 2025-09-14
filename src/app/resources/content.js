@@ -97,6 +97,7 @@ const about = {
         achievements: [
           <>Création d'une plateforme e-commerce multi-vendeurs, incluant un système de comparaison de produits, sous Symfony.</>,
           <>développement de site sur mesure</>,
+          <>développement d'extension wordpress</>,
           <>Réalisation et maintenance de sites Wordpress</>,
           <>développement d'un outil de gestion de projets adaptés a l'entreprise</>,
         ],

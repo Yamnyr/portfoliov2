@@ -1,24 +1,20 @@
-"use client";
+"use client"
 
-import {
-  AvatarGroup,
-  Carousel,
-  Column,
-  Flex,
-  Heading,
-  SmartLink,
-  Text,
-} from "@/once-ui/components";
+import type React from "react"
+
+import { AvatarGroup, Carousel, Column, Flex, Heading, SmartLink, Text } from "@/once-ui/components"
+import { CategoryBadge } from "./work/CategoryBadge"
 
 interface ProjectCardProps {
-  href: string;
-  priority?: boolean;
-  images: string[];
-  title: string;
-  content: string;
-  description: string;
-  avatars: { src: string }[];
-  link: string;
+    href: string
+    priority?: boolean
+    images: string[]
+    title: string
+    content: string
+    description: string
+    avatars: { src: string }[]
+    link: string
+    category?: string // Ajouter cette ligne
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
