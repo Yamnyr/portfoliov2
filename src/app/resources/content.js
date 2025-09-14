@@ -6,7 +6,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role:      'Developer web',
+  role:      'Data Scientist',
   avatar:    '/images/avatar.jpg',
   location:  'Europe/Paris',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ['Français', 'English']  // optional: Leave the array empty if you don't want to display languages
@@ -52,11 +52,11 @@ const home = {
   label: "Accueil",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio Quentin WAROQUET ${person.role}`,
-  headline: <>Developpeur web</>,
+  headline: <>Data Scientist</>,
   subline: (
-      <>💻 Passionné de développement web <br/>
+      <>💻 Passionné de développement web et d'IA<br/>
         🎓 Étudiant à <InlineCode>l'école IPSSI</InlineCode> en Mastère Big Data & IA <br/>
-        Développeur, aspirant CEO chez <InlineCode>Hurlea</InlineCode> (un jour... peut-être 😄)
+        🚀 Curieux de nouvelles technologies et toujours prêt à relever des défis en IA et développement web
       </>
   ),
 };
@@ -79,10 +79,7 @@ const about = {
   intro: {
     display: true,
     title: 'Introduction',
-    description: <>Je suis un développeur web passionné par la création d'applications web innovantes et performantes.
-      Mon expertise s'étend du développement front-end au back-end, en passant par l'optimisation des performances et l'expérience utilisateur,
-      toujours avec le souci du détail que j'ai développé à travers mes formations et mes expériences professionnels.
-      Actuellement en alternance à l'école IPSSI en M1 développeur IA & Bigdata
+    description: <>Je suis un développeur web passionné par la création d'applications web innovantes et performantes. Mon expertise s'étend du développement front-end au back-end, en passant par l'optimisation des performances et l'expérience utilisateur, toujours avec le souci du détail que j'ai développé à travers mes formations et mes expériences professionnelles. Actuellement en alternance à l'école IPSSI en M1 Développeur IA & Big Data, j'ai commencé à explorer le domaine de l'intelligence artificielle et je prends beaucoup de plaisir à concevoir des systèmes intelligents capables d'analyser et d'interpréter des données pour enrichir l'expérience utilisateur.
 
     </>
   },
@@ -352,30 +349,30 @@ const about = {
           }
         ]
       },
-      {
-        title: 'Angular',
-        description: <>Développement d'applications web robustes avec le framework Angular de Google.</>,
-        images: [
-          {
-            src: '/images/competences/angular.png',
-            alt: 'angular',
-            width: 4,
-            height: 4
-          }
-        ]
-      },
-      {
-        title: 'Flutter',
-        description: <>Développement d'applications multiplateformes performantes avec le SDK Flutter de Google.</>,
-        images: [
-          {
-            src: '/images/competences/flutter.png',
-            alt: 'flutter',
-            width: 4,
-            height: 4
-          }
-        ]
-      },
+      // {
+      //   title: 'Angular',
+      //   description: <>Développement d'applications web robustes avec le framework Angular de Google.</>,
+      //   images: [
+      //     {
+      //       src: '/images/competences/angular.png',
+      //       alt: 'angular',
+      //       width: 4,
+      //       height: 4
+      //     }
+      //   ]
+      // },
+      // {
+      //   title: 'Flutter',
+      //   description: <>Développement d'applications multiplateformes performantes avec le SDK Flutter de Google.</>,
+      //   images: [
+      //     {
+      //       src: '/images/competences/flutter.png',
+      //       alt: 'flutter',
+      //       width: 4,
+      //       height: 4
+      //     }
+      //   ]
+      // },
       {
         title: 'Node.js',
         description: <>Création d'applications serveur scalables et haute performance avec Node.js.</>,
@@ -425,6 +422,36 @@ const about = {
         ]
       },
       {
+        title: 'Manipulation de données',
+        description: <>Nettoyage, transformation et analyse de données avec Pandas et NumPy.</>,
+        images: [
+          { src: '/images/competences/pandas.png', alt: 'Pandas', width: 4, height: 4 },
+          { src: '/images/competences/numpy.png', alt: 'NumPy', width: 4, height: 4 }
+        ]
+      },
+      {
+        title: 'Machine Learning',
+        description: <>Création de modèles prédictifs et analyse statistique avec scikit-learn.</>,
+        images: [
+          { src: '/images/competences/scikit-learn.png', alt: 'Scikit-learn', width: 4, height: 4 }
+        ]
+      },
+      {
+        title: 'Deep Learning',
+        description: <>Développement de réseaux de neurones et modèles avancés avec PyTorch.</>,
+        images: [
+          { src: '/images/competences/pytorch.png', alt: 'PyTorch', width: 4, height: 4 }
+        ]
+      },
+      // {
+      //   title: 'Visualisation de données',
+      //   description: <>Création de graphiques et visualisation de données avec Matplotlib et Seaborn.</>,
+      //   images: [
+      //     { src: '/images/competences/matplotlib.png', alt: 'Matplotlib', width: 4, height: 4 },
+      //     { src: '/images/competences/seaborn.png', alt: 'Seaborn', width: 4, height: 4 }
+      //   ]
+      // }
+      {
         title: 'Streamlit',
         description: <>Développement rapide d’applications web interactives pour la data science.</>,
         images: [
@@ -439,7 +466,6 @@ const about = {
     ]
   }
 }
-
 
 const blog = {
   label: "Blog",
