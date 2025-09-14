@@ -12,6 +12,8 @@ interface BadgeProps extends React.ComponentProps<typeof Flex> {
   children?: React.ReactNode;
   href?: string;
   effect?: boolean;
+  variant?: "primary" | "secondary" | "tertiary";
+  size?: "s" | "m" | "l";
 }
 
 const Badge = forwardRef<HTMLDivElement | HTMLAnchorElement, BadgeProps>(
