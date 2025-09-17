@@ -1,0 +1,52 @@
+---
+title: "IABnB"
+publishedAt: "2025-09-17"
+summary: "Application web interactive utilisant l'IA pour estimer le prix optimal d’un logement Airbnb et analyser le marché."
+images:
+  - "/images/projects/IABnB/cover-02.jpg"
+  - "/images/projects/IABnB/cover-01.jpg"
+  - "/images/projects/IABnB/cover-03.jpg"
+team:
+  - name: "WAROQUET Quentin"
+    role: "Développeur IA / Web"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/quentin-waroquet-017008203/"
+category: "ia-data"
+---
+
+## Description
+
+Ce projet est une **application web interactive propulsée par l’intelligence artificielle** pour estimer le prix optimal d’un logement Airbnb en fonction de ses caractéristiques et de sa localisation.
+
+Le cœur de l’application repose sur un **modèle XGBoost**, entraîné sur des milliers d’annonces, capable de prédire les prix avec précision et de fournir des insights sur les facteurs qui influencent le prix.
+
+L’application propose également une **analyse exploratoire des données Airbnb** permettant de visualiser les tendances du marché et la répartition des prix.
+
+## Fonctionnalités IA
+
+- **Prédiction de prix basée sur Machine Learning** :
+  - Modèle XGBoost entraîné sur un dataset massif d’annonces Airbnb.
+  - Prise en compte de variables telles que type de logement, capacité, équipements, localisation et saisonnalité.
+  - Log-transform pour gérer la distribution fortement asymétrique des prix.
+
+- **Explicabilité et insights** :
+  - Utilisation de **SHAP** pour comprendre l’influence de chaque variable sur le prix estimé.
+  - Affichage des 10 caractéristiques les plus importantes pour chaque prédiction.
+
+- **Optimisation de revenus** :
+  - Calcul automatique des revenus potentiels mensuels et annuels.
+  - Aide à la décision pour fixer un prix compétitif selon le quartier et les caractéristiques du logement.
+
+### Analyse des données
+
+- Visualisations interactives avec Streamlit :
+  - Distribution des prix réels et log-transformés.
+  - Top 10 des quartiers par prix moyen.
+  - Matrice de corrélation des variables numériques.
+  - Répartition spatiale des logements avec coloration par prix (échelle log pour lisibilité).
+
+## Technologies Used
+
+- **Machine Learning / IA** : Python, scikit-learn, XGBoost, SHAP, pandas, numpy
+- **Visualisation et Web** : Streamlit, matplotlib, seaborn
+- **Autres** : Joblib pour la sauvegarde du modèle, CSV pour le dataset (non inclus dans le dépôt pour limiter la taille)
