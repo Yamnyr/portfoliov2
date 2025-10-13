@@ -1,0 +1,82 @@
+---
+title: "Gestion Portefeuille"
+publishedAt: "2025-10-13"
+summary: "Application Streamlit connectée à Supabase permettant de gérer, suivre et analyser un portefeuille d’actifs financiers en temps réel."
+images:
+  - "/images/projects/Portefeuille/cover-01.mp4"
+team:
+  - name: "WAROQUET Quentin"
+    role: "Développeur IA / Web"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/quentin-waroquet-017008203/"
+category: "ia-data"
+---
+
+## Description
+
+**Mon Portefeuille** est une **application web interactive** développée avec **Streamlit** permettant de gérer un portefeuille d’actifs boursiers (actions, ETF, fonds, etc.) de manière simple et sécurisée.
+L’application se connecte à **Supabase** pour la gestion des utilisateurs et le stockage des données, et utilise **Yahoo Finance** pour récupérer les informations de marché en temps réel.
+
+Elle offre une vue complète du portefeuille avec des **analyses de performance**, des **visualisations interactives** et un **scanner intelligent des frais et dividendes**.
+
+---
+
+## Fonctionnalités principales
+
+### Authentification & Base de données
+- Connexion sécurisée via **Google Auth** (intégrée à Streamlit).
+- Sauvegarde automatique des positions dans **Supabase**.
+- Gestion complète des actifs : ajout, édition, suppression et export CSV/TXT.
+
+### Suivi du portefeuille
+- Téléchargement automatique des prix récents via **Yahoo Finance** (`yfinance`).
+- Calculs instantanés :
+  - Valeur actuelle et capital investi.
+  - Gains/pertes en $ et en %.
+  - Poids de chaque position dans le portefeuille global.
+- Classement dynamique des actifs selon la performance.
+
+### Visualisations interactives
+- Graphiques réalisés avec **Plotly** :
+  - **Camembert** de répartition du portefeuille.
+  - **Histogramme** des performances par actif.
+- Tableaux enrichis avec mise en couleur selon la performance.
+
+### Scanner de Frais & Dividendes
+- Analyse automatisée des frais de gestion (`expense ratio`) et des rendements (`dividend yield`).
+- Calculs :
+  - Frais annuels totaux.
+  - Rendement moyen du portefeuille.
+  - Revenus mensuels estimés.
+- Comparaison interactive via onglets “Frais” et “Dividendes”.
+
+### Actions rapides
+- Édition et suppression des positions directement dans l’interface.
+- Export du portefeuille en **CSV** ou **rapport texte détaillé** (valeur totale, performance, revenus estimés).
+
+---
+
+## Technologies Utilisées
+
+- **Frontend / Web App** : Streamlit, Plotly, Streamlit Searchbox
+- **Backend / Data** : Supabase (Base de données & Authentification), Pandas, NumPy
+- **Sources financières** : Yahoo Finance, YahooQuery
+- **Autres outils** :
+  - `@st.cache_data` et `@st.cache_resource` pour le cache intelligent
+  - Export CSV et génération de rapport TXT
+
+---
+
+## Objectif
+
+Fournir un **outil moderne, ergonomique et connecté** pour les investisseurs particuliers souhaitant :
+- centraliser leur portefeuille multi-actifs,
+- suivre la performance et la répartition en temps réel,
+- et optimiser leur stratégie grâce à des insights clairs sur les frais et dividendes.
+
+---
+
+## Lien du projet
+➡️ [Accéder à l’application Tableau Financier](https://moulachart.streamlit.app/Portefeuille)
+
+---

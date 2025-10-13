@@ -1,0 +1,124 @@
+---
+title: "Tableau Financier"
+publishedAt: "2025-10-09"
+summary: "Application web interactive pour comparer les performances boursières d’actions et d’indices, avec visualisations dynamiques et indicateurs financiers avancés."
+images:
+  - "/images/projects/MoulaChart/cover-01.mp4"
+team:
+  - name: "WAROQUET Quentin"
+    role: "Développeur IA / Web"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/quentin-waroquet-017008203/"
+category: "ia-data"
+---
+
+## Description
+
+**Tableau Financier** est une **application web d’analyse boursière interactive** permettant de comparer la performance, la volatilité et les ratios de risque/rendement de multiples actions et indices boursiers.
+Basée sur les données de **Yahoo Finance**, elle offre une **analyse complète et visuelle** de l’évolution des marchés.
+
+L’utilisateur peut sélectionner ses actifs (S&P 500, NASDAQ 100 ou CAC 40), choisir la période d’analyse, normaliser les performances, et accéder à une multitude d’indicateurs clés tels que le **ratio de Sharpe**, le **drawdown maximal**, ou encore la **volatilité annualisée**.
+
+---
+
+## Fonctionnalités principales
+
+### Analyse dynamique des marchés
+- Sélection d’actions depuis les indices **S&P 500**, **NASDAQ 100**, ou **CAC 40**.
+- Téléchargement automatique des données via **Yahoo Finance (yfinance)**.
+- Comparaison simultanée de plusieurs actifs.
+- Option de comparaison avec l’indice de référence (SPY, QQQ, ^FCHI).
+
+### Indicateurs de performance
+- **Performance totale et annualisée (%)**
+- **Rendement moyen, médian, meilleur et pire jour**
+- **Volatilité quotidienne et annualisée**
+- **Ratio de Sharpe / Sortino**
+- **Drawdown maximum et actuel**
+- **Proportion de jours positifs**
+- **Ratio gain/perte et efficience rendement/risque**
+
+---
+
+## Visualisations interactives
+
+### Performance historique
+- Graphique principal comparant les cours ou performances normalisées (base 100).
+- Couleurs harmonieuses et design moderne avec **Plotly Dark Theme**.
+- Survol interactif pour visualiser la valeur exacte de chaque actif à une date donnée.
+
+### Rendements quotidiens
+- Évolution journalière des rendements (%).
+- Identification des périodes de forte volatilité ou de stabilité.
+
+### Volatilité glissante (30 jours)
+- Mesure de la volatilité mobile sur 30 jours.
+- Aide à identifier les périodes de risque accru.
+
+### Matrice Risque-Rendement
+- Scatter plot moderne mettant en relation **volatilité** et **performance totale**.
+- Taille et couleur des bulles indiquant le rendement global.
+- Outil visuel pour évaluer l’efficience des actifs.
+
+---
+
+## Analyse détaillée
+
+L’application propose plusieurs **onglets d’analyse thématique** :
+
+- **Vue d’ensemble** : résumé des performances clés (rendement, volatilité, drawdown, Sharpe).
+- **Prix & Performance** : suivi des cours et des rendements agrégés.
+- **⚠Risque** : indicateurs de volatilité, drawdown et ratios de risque.
+- **Distribution** : analyse statistique des rendements (skewness, kurtosis, ratio gain/perte).
+
+Chaque tableau est coloré selon des dégradés **intuitifs** (vert = bon, rouge = mauvais), facilitant la lecture.
+
+---
+
+## Fonctionnalités avancées
+
+- **Comparaison d’indice** : possibilité de comparer tout portefeuille à son indice de référence (SPY, QQQ, ^FCHI).
+- **Normalisation (base 100)** : permet de visualiser la performance relative.
+- **Export CSV** : téléchargement des données analysées.
+- **Classements automatiques** :
+  - Meilleures performances
+  - Actifs les plus stables
+  - Meilleurs ratios rendement/risque
+
+---
+
+## Technologies utilisées
+
+- **Frontend / App Web** : Streamlit
+- **Sources de données** : Yahoo Finance API (via `yfinance`), Wikipedia (via `pandas.read_html`)
+- **Visualisation** : Plotly (Graph Objects & Express), CSS personnalisé
+- **Analyse de données** : pandas, numpy
+- **Performance et cache** : `@st.cache_data` pour accélérer les requêtes et chargements
+
+---
+
+## Points forts techniques
+
+- **Structure modulaire et lisible** (fonctions séparées pour chargement, analyse, visualisation).
+- **Design moderne et cohérent** (couleurs sombres, hover unifié, légendes dynamiques).
+- **Calculs financiers précis** :
+  - Annualisation correcte de la volatilité et des rendements.
+  - Mesure robuste du drawdown et du ratio Sharpe.
+- **Expérience utilisateur fluide** : tout est interactif, sans rechargement manuel.
+
+---
+
+## Cas d’usage
+
+- Analyse comparative d’un portefeuille d’actions.
+- Études de volatilité entre secteurs (Tech, Énergie, Santé...).
+- Backtesting visuel de stratégies d’investissement.
+- Outil pédagogique pour comprendre les indicateurs de risque financier.
+
+
+
+
+## Lien du projet
+➡️ [Accéder à l’application Tableau Financier](https://moulachart.streamlit.app)
+
+---
