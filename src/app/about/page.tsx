@@ -5,7 +5,7 @@ import {
   Flex,
   Heading,
   Icon,
-  IconButton, RevealFx,
+  IconButton, RevealFx, Row,
   SmartImage,
   Tag,
   Text,
@@ -262,7 +262,7 @@ export default function About() {
                             </Text>
                           </Flex>
                           {/* Liste des achievements */}
-                          <Column as="ul" gap="16">
+                          <Column as="ul" gap="0">
                             {experience.achievements.map((achievement: JSX.Element, index: number) => (
                                 <Text as="li" variant="body-default-m" key={`${experience.company}-${index}`}>
                                   {achievement}
@@ -336,72 +336,42 @@ export default function About() {
                   <Column fillWidth gap="l">
                     {about.technical.skills.map((skill, index) => (
                         <Column key={`${skill}-${index}`} fillWidth gap="4">
-                          {/* Si une seule image, on aligne à côté */}
-                          {skill.images && skill.images.length === 1 ? (
-                              <Flex fillWidth horizontal="start" vertical="center" gap="m">
-                                {/* Image unique à gauche */}
-                                <Flex
-                                    border="neutral-medium"
-                                    radius="m"
-                                    //@ts-ignore
-                                    minWidth={skill.images[0].width}
-                                    //@ts-ignore
-                                    height={skill.images[0].height}
-                                >
-                                  <SmartImage
-                                      enlarge
-                                      radius="m"
-                                      //@ts-ignore
-                                      sizes={skill.images[0].width.toString()}
-                                      //@ts-ignore
-                                      alt={skill.images[0].alt}
-                                      //@ts-ignore
-                                      src={skill.images[0].src}
-                                  />
-                                </Flex>
-                                {/* Informations skill */}
-                                <Column gap="2">
-                                  <Text variant="heading-strong-l">{skill.title}</Text>
-                                  <Text variant="body-default-m" onBackground="neutral-weak">
-                                    {skill.description}
-                                  </Text>
-                                </Column>
-                              </Flex>
-                          ) : (
-                              // Si plusieurs images ou aucune, affichage classique
-                              <>
-                                <Text variant="heading-strong-l">{skill.title}</Text>
-                                <Text variant="body-default-m" onBackground="neutral-weak">
-                                  {skill.description}
-                                </Text>
-                                {skill.images && skill.images.length > 0 && (
-                                    <Flex fillWidth paddingTop="m" gap="12" wrap>
-                                      {skill.images.map((image, index) => (
-                                          <Flex
-                                              key={index}
-                                              border="neutral-medium"
-                                              radius="m"
-                                              //@ts-ignore
-                                              minWidth={image.width}
-                                              //@ts-ignore
-                                              height={image.height}
-                                          >
-                                            <SmartImage
-                                                enlarge
-                                                radius="m"
-                                                //@ts-ignore
-                                                sizes={image.width.toString()}
-                                                //@ts-ignore
-                                                alt={image.alt}
-                                                //@ts-ignore
-                                                src={image.src}
-                                            />
-                                          </Flex>
-                                      ))}
-                                    </Flex>
-                                )}
-                              </>
+                          <Text id={skill.title} variant="heading-strong-l">
+                            {skill.title}
+                          </Text>
+                          <Text variant="body-default-m" onBackground="neutral-weak">
+                            {skill.description}
+                          </Text>
+                          {skill.tags && skill.tags.length > 0 && (
+                              <Row wrap gap="8" paddingTop="8">
+                                {skill.tags.map((tag, tagIndex) => (
+                                    <Tag key={`${skill.title}-${tagIndex}`} size="l" prefixIcon={tag.icon}>
+                                      {tag.name}
+                                    </Tag>
+                                ))}
+                              </Row>
                           )}
+                          {/*{skill.images && skill.images.length > 0 && (*/}
+                          {/*    <Row fillWidth paddingTop="m" gap="12" wrap>*/}
+                          {/*      {skill.images.map((image, index) => (*/}
+                          {/*          <Row*/}
+                          {/*              key={index}*/}
+                          {/*              border="neutral-medium"*/}
+                          {/*              radius="m"*/}
+                          {/*              minWidth={image.width}*/}
+                          {/*              height={image.height}*/}
+                          {/*          >*/}
+                          {/*            <Media*/}
+                          {/*                enlarge*/}
+                          {/*                radius="m"*/}
+                          {/*                sizes={image.width.toString()}*/}
+                          {/*                alt={image.alt}*/}
+                          {/*                src={image.src}*/}
+                          {/*            />*/}
+                          {/*          </Row>*/}
+                          {/*      ))}*/}
+                          {/*    </Row>*/}
+                          {/*)}*/}
                         </Column>
                     ))}
                   </Column>

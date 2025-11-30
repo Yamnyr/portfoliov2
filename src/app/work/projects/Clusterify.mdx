@@ -1,0 +1,78 @@
+---
+title: "Clusterify - Clustering de Musique par IA"
+publishedAt: "2025-12-01"
+summary: "Application web utilisant l'IA pour regrouper automatiquement les morceaux de musique en clusters basés sur leurs caractéristiques audio. Grâce à des algorithmes de Machine Learning."
+images:
+  - "/images/projects/Clusterify/cover-03.png"
+  - "/images/projects/Clusterify/cover-02.png"
+  - "/images/projects/Clusterify/cover-01.png"
+team:
+  - name: "WAROQUET Quentin"
+    role: "Ingénieur IA / Développeur Web"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/quentin-waroquet-017008203/"
+category: "ia-data"
+---
+
+## Description
+**Clusterify** est une **application web interactive** exploitant des **algorithmes d'Intelligence Artificielle** pour analyser et regrouper les morceaux de musique en fonction de leurs caractéristiques audio.
+
+En utilisant des techniques avancées de **clustering (K-means)** et de **réduction de dimension (PCA)**, Clusterify permet aux utilisateurs de visualiser et d'explorer leurs playlists Spotify sous un nouvel angle, en identifiant des **groupes musicaux cohérents** basés sur des critères tels que l'énergie, la danse, la valence, et bien plus.
+
+---
+
+## Fonctionnalités principales
+### Analyse Intelligente par IA
+- **Connexion sécurisée à Spotify** : Authentification via OAuth2 pour accéder aux playlists.
+- **Récupération et traitement des données** : Extraction des caractéristiques audio via l'API Reccobeats.
+- **Clustering automatique** : Utilisation de **K-means** pour regrouper les morceaux en clusters.
+- **Optimisation du nombre de clusters** : Méthode du coude pour déterminer le nombre optimal de groupes.
+
+### Visualisations Interactives
+- **Scatter Plot PCA** : Visualisation 2D des clusters générés par l'IA.
+- **Graphique du coude** : Aide à la décision pour le nombre optimal de clusters.
+- **Radar Chart** : Profil audio moyen de chaque cluster (énergie, danse, valence, etc.).
+
+### Création de Playlists par IA
+- **Génération automatique de playlists** : Création de playlists Spotify basées sur les clusters identifiés par l'IA.
+- **Labels descriptifs intelligents** : Noms et descriptions automatiques pour chaque cluster.
+
+---
+
+## Analyse détaillée
+### Visualisation des Clusters par IA
+- **Scatter Plot PCA** : Visualisation des morceaux dans un espace 2D après réduction de dimension.
+- **Radar Chart** : Profil audio moyen de chaque cluster (énergie, danse, valence, etc.).
+- **Détails des clusters** : Nombre de morceaux, tempo moyen, énergie moyenne, etc.
+
+### Interface Utilisateur Intuitive
+- **Sélection de la playlist** : Choix parmi les playlists utilisateur.
+- **Options de clustering** : Choix entre un nombre de clusters automatique ou manuel.
+- **Création de playlists** : Export des clusters vers Spotify.
+
+---
+
+## Technologies utilisées
+- **Frontend / App Web** : Streamlit
+- **APIs** : Spotify API, Reccobeats API
+- **Analyse de données et IA** : pandas, numpy, scikit-learn (K-means, PCA)
+- **Visualisation** : Plotly, CSS personnalisé
+- **Authentification** : Spotify OAuth2
+
+---
+
+## Points forts techniques
+- **Intégration Spotify** : Récupération des playlists et des morceaux.
+- **Algorithmes d'IA** : Clustering intelligent avec K-means et réduction de dimension avec PCA.
+- **Visualisations interactives** : Plotly pour des graphiques dynamiques.
+- **Expérience utilisateur fluide** : Interface intuitive et réactive.
+
+---
+
+## Cas d’usage
+- **Découverte musicale** : Identifiez des regroupements inédits dans vos playlists.
+- **Création de playlists thématiques** : Générez des playlists basées sur des caractéristiques audio.
+- **Analyse des tendances musicales** : Comprenez les profils audio de vos morceaux préférés.
+
+## Lien du projet
+➡️ [Accéder à l’application Clusterify](#) *(Lien à ajouter)*

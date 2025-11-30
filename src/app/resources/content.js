@@ -54,9 +54,9 @@ const home = {
   description: `Portfolio Quentin WAROQUET ${person.role}`,
   headline: <>Data Scientist</>,
   subline: (
-      <>💻 Passionné de développement web et d'IA<br/>
+      <>💻 Passionné de Data Science et IA<br/>
         🎓 Étudiant à <InlineCode>l'école IPSSI</InlineCode> en Mastère Big Data & IA <br/>
-        🚀 Curieux de nouvelles technologies et toujours prêt à relever des défis en IA et développement web
+        🚀 Toujours motivé par la conception et la mise en œuvre de projets ambitieux
       </>
   ),
 };
@@ -79,7 +79,13 @@ const about = {
   intro: {
     display: true,
     title: 'Introduction',
-    description: <>Je suis un développeur web passionné par la création d'applications web innovantes et performantes. Mon expertise s'étend du développement front-end au back-end, en passant par l'optimisation des performances et l'expérience utilisateur, toujours avec le souci du détail que j'ai développé à travers mes formations et mes expériences professionnelles. Actuellement en alternance à l'école IPSSI en M1 Développeur IA & Big Data, j'ai commencé à explorer le domaine de l'intelligence artificielle et je prends beaucoup de plaisir à concevoir des systèmes intelligents capables d'analyser et d'interpréter des données pour enrichir l'expérience utilisateur.
+    description: <>Je suis un Data Analyst et Data Scientist passionné, avec un solide background en développement web.
+      Mon expertise couvre l’exploration, la préparation et l’analyse de données, la modélisation statistique et le machine learning,
+      jusqu’au développement de systèmes intelligents pour extraire des insights et optimiser les décisions.
+        <br></br>
+      Actuellement en alternance à l’IPSSI en M2 Big Data & IA, je conçois des solutions data-driven en Python. Curieux et rigoureux,
+      j’aime transformer des données complexes en insights utiles,
+      et mettre à profit mon expérience en développement web pour créer des applications analytiques efficaces et intuitives.
 
     </>
   },
@@ -92,11 +98,17 @@ const about = {
         timeframe: '2023 - Present',
         role: 'Developpeur web',
         achievements: [
-          <>Création d'une plateforme e-commerce multi-vendeurs, incluant un système de comparaison de produits, sous Symfony.</>,
-          <>développement de site sur mesure</>,
-          <>développement d'extension wordpress</>,
-          <>Réalisation et maintenance de sites Wordpress</>,
-          <>développement d'un outil de gestion de projets adaptés a l'entreprise</>,
+          <>Conception d’une plateforme e-commerce multi-vendeurs (Symfony,
+            React, MySQL)</>,
+          <>Intégration d’un système de comparaison de produits basé sur des
+            données MySQL</>,
+          <>développement d'un outil de gestion de projets adapté à l'entreprise</>,
+          <>Participation à la gestion d’équipe : coordination des tâches, suivi de
+            l’avancement, organisation de réunions.
+          </>,
+          <>Mise en place et utilisation d’outils de productivité (Notion) pour
+            structurer les processus internes et améliorer la communication.
+          </>,
         ],
         images: [
           {
@@ -131,7 +143,7 @@ const about = {
         role: 'Developpeur web',
         achievements: [
           <>Développement de scripts php pour une interface rest api</>,
-          <>Création de documentations complètes/ schéma / algorigramme afin de présenter le projet réalisé durant ce stage</>,
+          <>Création de documentations complètes/ schéma / algorigramme</>,
           <>Développement sous wordpress</>,
         ],
         images: [
@@ -202,272 +214,91 @@ const about = {
   technical: {
     display: true,
     title: 'Compétences',
-
     skills: [
       {
-        title: 'Langages de développement',
-        description: <>HTML, CSS, JavaScript, PHP, Python, SQL</>,
-        images: [
-          {
-            src: '/images/competences/html.png',
-            alt: 'html',
-            width: 4,
-            height: 4
-          },
-          {
-            src: '/images/competences/css.png',
-            alt: 'css',
-            width: 4,
-            height: 4
-          },
-          {
-            src: '/images/competences/js.png',
-            alt: 'js',
-            width: 4,
-            height: 4
-          },
-          {
-            src: '/images/competences/typescript.png',
-            alt: 'typescript',
-            width: 4,
-            height: 4
-          },
-          {
-            src: '/images/competences/php.png',
-            alt: 'php',
-            width: 4,
-            height: 4
-          },
-          {
-            src: '/images/competences/python.png',
-            alt: 'python',
-            width: 4,
-            height: 4
-          },
-          {
-            src: '/images/competences/sql.png',
-            alt: 'sql',
-            width: 4,
-            height: 4
-          }
+        title: "Analyse de données & Statistiques",
+        description: (
+            <>Techniques essentielles pour explorer, préparer et analyser les données afin d’en extraire des insights fiables.</>
+        ),
+        tags: [
+          {name: "Python", icon: "Python"},
+          {name: "R", icon: "R"},
+          {name: "SQL", icon: "SQL"},
+          {name: "Pandas", icon: "Pandas"},
+          {name: "NumPy", icon: "NumPy"},
+          {name: "Data Cleaning", icon: "Data Cleaning"},
+          {name: "Statistical Analysis", icon: "Statistical Analysis"}
         ]
       },
       {
-        title: 'Git',
-        description: <>Contrôle de version et développement collaboratif avec Git et GitHub.</>,
-        images: [
-          {
-            src: '/images/competences/git.png',
-            alt: 'git',
-            width: 4,
-            height: 4
-          },
-          {
-            src: '/images/competences/gitlab.png',
-            alt: 'gitlab',
-            width: 4,
-            height: 4
-          },
-          {
-            src: '/images/competences/github.png',
-            alt: 'github',
-            width: 4,
-            height: 4
-          }
+        title: "Visualisation & Business Intelligence",
+        description: (
+            <>Compétences dédiées à la création de visualisations claires et de tableaux de bord interactifs pour faciliter la prise de décision.</>
+        ),
+        tags: [
+          {name: "Tableau", icon: "Tableau"},
+          {name: "Plotly", icon: "Plotly"},
+          {name: "Matplotlib", icon: "Matplotlib"},
+          {name: "Seaborn", icon: "Seaborn"},
+          {name: "Dashboards interactifs", icon: "Dashboards interactifs"},
+          // {name: "Data Storytelling", icon: "Data Storytelling"},
+          // {name: "Reporting automatisé", icon: "Reporting automatisé"},
+          {name: "Streamlit", icon: "Streamlit"}
         ]
       },
       {
-        title: 'MySQL/PostgreSQL',
-        description: <>Gestion de bases de données relationnelles avec requêtes avancées et optimisation.</>,
-        images: [
-          {
-            src: '/images/competences/postgresql.png',
-            alt: 'postgresql',
-            width: 4,
-            height: 4
-          },
-          {
-            src: '/images/competences/mysql.png',
-            alt: 'mysql',
-            width: 4,
-            height: 4
-          },
-          {
-            src: '/images/competences/mongodb.png',
-            alt: 'MongoDB',
-            width: 4,
-            height: 4
-          }
+        title: "Machine Learning",
+        description: (
+            <>Méthodes supervisées et non supervisées pour la construction, l’entraînement et l’optimisation de modèles prédictifs.</>
+        ),
+        tags: [
+          {name: "Scikit-learn", icon: "Scikit-learn" },
+          {name: "Régression linéaire / logistique", icon: "Regression" },
+          {name: "Arbres de Décision", icon: "Decision Tree" },
+          {name: "Random Forest", icon: "Random Forest" },
+          {name: "K-Means", icon: "K-Means" },
+          {name: "Feature Engineering", icon: "Feature Engineering" },
+          // {name: "Feature Selection", icon: "Feature Selection" },
+          // {name: "Évaluation des modèles", icon: "Évaluation des modèles"},
+          // {name: "Pipelines ML", icon: "Pipelines ML"},
+          // {name: "NLP (bases)", icon: "NLP"}
         ]
       },
       {
-        title: 'Symfony',
-        description: <>Création d'applications PHP robustes avec le Framework Symfony et Doctrine ORM.</>,
-        images: [
-          {
-            src: '/images/competences/symfony.png',
-            alt: 'Symfony',
-            width: 4,
-            height: 4
-          }
+        title: "Deep Learning",
+        description: (
+            <>Frameworks et techniques avancées pour concevoir et entraîner des réseaux de neurones modernes.</>
+        ),
+        tags: [
+          {name: "TensorFlow", icon: "TensorFlow"},
+          {name: "PyTorch", icon: "PyTorch"},
+          {name: "Modèles Convolutifs", icon: "CNN"},
+          {name: "Modèles Récurrents", icon: "RNN" },
+          {name: "Modèles Génératifs", icon: "Modèles Génératifs"},
+          {name: "Reinforcement Learning", icon: "Reinforcement Learning"},
+          // {name: "Modèles Génétiques", icon: "NEAT"},
+          // {name: "Transfer Learning", icon: "Transfer Learning"}
         ]
       },
       {
-        title: 'React / react native',
-        description: <>Création d'interfaces utilisateur dynamiques et réactives avec l'écosystème React.<br/>
-          Développement d'applications mobiles multiplateformes pour iOS et Android.</>,
-        images: [
-          {
-            src: '/images/competences/react.png',
-            alt: 'react',
-            width: 4,
-            height: 4
-          }
+        title: "Data Engineering léger",
+        description: (
+            <>Outils essentiels pour automatiser des flux de données, travailler avec des environnements techniques et structurer des pipelines simples.</>
+        ),
+        tags: [
+          {name: "ETL", icon: "ETL"},
+          {name: "APIs", icon: "API"},
+          {name: "Docker", icon: "Docker"},
+          {name: "Git", icon: "Git"},
+          {name: "Jupyter Notebook", icon: "Jupyter Notebook"},
+          // {name: "Google Colab", icon: "Google Colab"}
         ]
-      },
-      // {
-      //     title: 'React Native',
-      //     description: <>Développement d'applications mobiles multiplateformes pour iOS et Android.</>,
-      //     images: [
-      //         {
-      //             src: '/images/competences/react.png',
-      //             alt: 'react-native',
-      //             width: 4,
-      //             height: 4
-      //         }
-      //     ]
-      // },
-      {
-        title: 'Vue.js',
-        description: <>Développement d'interfaces utilisateur progressives et modulaires avec Vue.js.</>,
-        images: [
-          {
-            src: '/images/competences/vue.png',
-            alt: 'vue',
-            width: 4,
-            height: 4
-          }
-        ]
-      },
-      // {
-      //   title: 'Angular',
-      //   description: <>Développement d'applications web robustes avec le framework Angular de Google.</>,
-      //   images: [
-      //     {
-      //       src: '/images/competences/angular.png',
-      //       alt: 'angular',
-      //       width: 4,
-      //       height: 4
-      //     }
-      //   ]
-      // },
-      // {
-      //   title: 'Flutter',
-      //   description: <>Développement d'applications multiplateformes performantes avec le SDK Flutter de Google.</>,
-      //   images: [
-      //     {
-      //       src: '/images/competences/flutter.png',
-      //       alt: 'flutter',
-      //       width: 4,
-      //       height: 4
-      //     }
-      //   ]
-      // },
-      {
-        title: 'Node.js',
-        description: <>Création d'applications serveur scalables et haute performance avec Node.js.</>,
-        images: [
-          {
-            src: '/images/competences/node-js.png',
-            alt: 'node-js',
-            width: 4,
-            height: 4
-          }
-        ]
-      },
-      {
-        title: 'ExpressJS',
-        description: <>Construction d'APIs backend évolutives et d'applications web avec Node.js.</>,
-        images: [
-          {
-            src: '/images/competences/express.png',
-            alt: 'Symfony',
-            width: 4,
-            height: 4
-          }
-        ]
-      },
-      {
-        title: 'Docker',
-        description: <>Conteneurisation d'applications pour des déploiements rapides et efficaces avec Docker.</>,
-        images: [
-          {
-            src: '/images/competences/docker.png',
-            alt: 'Docker',
-            width: 4,
-            height: 4
-          }
-        ]
-      },
-      {
-        title: 'Figma',
-        description: <>Création et gestion de conteneurs pour simplifier le déploiement des applications.</>,
-        images: [
-          {
-            src: '/images/competences/figma.png',
-            alt: 'figma',
-            width: 4,
-            height: 4
-          }
-        ]
-      },
-      {
-        title: 'Manipulation de données',
-        description: <>Nettoyage, transformation et analyse de données avec Pandas et NumPy.</>,
-        images: [
-          { src: '/images/competences/pandas.png', alt: 'Pandas', width: 4, height: 4 },
-          { src: '/images/competences/numpy.png', alt: 'NumPy', width: 4, height: 4 }
-        ]
-      },
-      {
-        title: 'Machine Learning',
-        description: <>Création de modèles prédictifs et analyse statistique avec scikit-learn.</>,
-        images: [
-          { src: '/images/competences/scikit-learn.png', alt: 'Scikit-learn', width: 4, height: 4 }
-        ]
-      },
-      {
-        title: 'Deep Learning',
-        description: <>Développement de réseaux de neurones et modèles avancés avec PyTorch.</>,
-        images: [
-          { src: '/images/competences/pytorch.png', alt: 'PyTorch', width: 4, height: 4 }
-        ]
-      },
-      // {
-      //   title: 'Visualisation de données',
-      //   description: <>Création de graphiques et visualisation de données avec Matplotlib et Seaborn.</>,
-      //   images: [
-      //     { src: '/images/competences/matplotlib.png', alt: 'Matplotlib', width: 4, height: 4 },
-      //     { src: '/images/competences/seaborn.png', alt: 'Seaborn', width: 4, height: 4 }
-      //   ]
-      // }
-      {
-        title: 'Streamlit',
-        description: <>Développement rapide d’applications web interactives pour la data science.</>,
-        images: [
-          {
-            src: '/images/competences/streamlit.png',
-            alt: 'Streamlit',
-            width: 4,
-            height: 4
-          }
-        ]
-      },
+      }
     ]
   }
-}
+};
 
-const blog = {
+  const blog = {
   label: "Blog",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,

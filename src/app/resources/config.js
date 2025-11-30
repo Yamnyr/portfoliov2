@@ -34,7 +34,7 @@ const effects = {
     radius: 75,
   },
   gradient: {
-    display: true,
+    display: false,
     x: 50,
     y: 0,
     width: 100,
