@@ -6,9 +6,9 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role:      'Data Scientist',
-  avatar:    '/images/avatar.jpg',
-  location:  'Europe/Paris',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  role: 'Data Scientist',
+  avatar: '/images/avatar.jpg',
+  location: 'Europe/Paris',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ['Français', 'English']  // optional: Leave the array empty if you don't want to display languages
 };
 
@@ -52,12 +52,12 @@ const home = {
   label: "Accueil",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio Quentin WAROQUET ${person.role}`,
-  headline: <>Data Scientist</>,
+  headline: <>Data Engineer</>,
   subline: (
-      <>💻 Passionné de Data Science et IA<br/>
-        🎓 Étudiant à <InlineCode>l'école IPSSI</InlineCode> en Mastère Big Data & IA <br/>
-        🚀 Toujours motivé par la conception et la mise en œuvre de projets ambitieux
-      </>
+    <>💻 Passionné de Data Science et IA<br />
+      🎓 Étudiant à <InlineCode>l'école IPSSI</InlineCode> en Mastère Big Data & IA <br />
+      🚀 Toujours motivé par la conception et la mise en œuvre de projets ambitieux
+    </>
   ),
 };
 
@@ -82,7 +82,7 @@ const about = {
     description: <>Je suis un Data Analyst et Data Scientist passionné, avec un solide background en développement web.
       Mon expertise couvre l’exploration, la préparation et l’analyse de données, la modélisation statistique et le machine learning,
       jusqu’au développement de systèmes intelligents pour extraire des insights et optimiser les décisions.
-        <br></br>
+      <br></br>
       Actuellement en alternance à l’IPSSI en M2 Big Data & IA, je conçois des solutions data-driven en Python. Curieux et rigoureux,
       j’aime transformer des données complexes en insights utiles,
       et mettre à profit mon expérience en développement web pour créer des applications analytiques efficaces et intuitives.
@@ -218,46 +218,46 @@ const about = {
       {
         title: "Analyse de données & Statistiques",
         description: (
-            <>Techniques essentielles pour explorer, préparer et analyser les données afin d’en extraire des insights fiables.</>
+          <>Techniques essentielles pour explorer, préparer et analyser les données afin d’en extraire des insights fiables.</>
         ),
         tags: [
-          {name: "Python", icon: "Python"},
-          {name: "R", icon: "R"},
-          {name: "SQL", icon: "SQL"},
-          {name: "Pandas", icon: "Pandas"},
-          {name: "NumPy", icon: "NumPy"},
-          {name: "Data Cleaning", icon: "Data Cleaning"},
-          {name: "Statistical Analysis", icon: "Statistical Analysis"}
+          { name: "Python", icon: "Python" },
+          { name: "R", icon: "R" },
+          { name: "SQL", icon: "SQL" },
+          { name: "Pandas", icon: "Pandas" },
+          { name: "NumPy", icon: "NumPy" },
+          { name: "Data Cleaning", icon: "Data Cleaning" },
+          { name: "Statistical Analysis", icon: "Statistical Analysis" }
         ]
       },
       {
         title: "Visualisation & Business Intelligence",
         description: (
-            <>Compétences dédiées à la création de visualisations claires et de tableaux de bord interactifs pour faciliter la prise de décision.</>
+          <>Compétences dédiées à la création de visualisations claires et de tableaux de bord interactifs pour faciliter la prise de décision.</>
         ),
         tags: [
-          {name: "Tableau", icon: "Tableau"},
-          {name: "Plotly", icon: "Plotly"},
-          {name: "Matplotlib", icon: "Matplotlib"},
-          {name: "Seaborn", icon: "Seaborn"},
-          {name: "Dashboards interactifs", icon: "Dashboards interactifs"},
+          { name: "Tableau", icon: "Tableau" },
+          { name: "Plotly", icon: "Plotly" },
+          { name: "Matplotlib", icon: "Matplotlib" },
+          { name: "Seaborn", icon: "Seaborn" },
+          { name: "Dashboards interactifs", icon: "Dashboards interactifs" },
           // {name: "Data Storytelling", icon: "Data Storytelling"},
           // {name: "Reporting automatisé", icon: "Reporting automatisé"},
-          {name: "Streamlit", icon: "Streamlit"}
+          { name: "Streamlit", icon: "Streamlit" }
         ]
       },
       {
         title: "Machine Learning",
         description: (
-            <>Méthodes supervisées et non supervisées pour la construction, l’entraînement et l’optimisation de modèles prédictifs.</>
+          <>Méthodes supervisées et non supervisées pour la construction, l’entraînement et l’optimisation de modèles prédictifs.</>
         ),
         tags: [
-          {name: "Scikit-learn", icon: "Scikit-learn" },
-          {name: "Régression linéaire / logistique", icon: "Regression" },
-          {name: "Arbres de Décision", icon: "Decision Tree" },
-          {name: "Random Forest", icon: "Random Forest" },
-          {name: "K-Means", icon: "K-Means" },
-          {name: "Feature Engineering", icon: "Feature Engineering" },
+          { name: "Scikit-learn", icon: "Scikit-learn" },
+          { name: "Régression linéaire / logistique", icon: "Regression" },
+          { name: "Arbres de Décision", icon: "Decision Tree" },
+          { name: "Random Forest", icon: "Random Forest" },
+          { name: "K-Means", icon: "K-Means" },
+          { name: "Feature Engineering", icon: "Feature Engineering" },
           // {name: "Feature Selection", icon: "Feature Selection" },
           // {name: "Évaluation des modèles", icon: "Évaluation des modèles"},
           // {name: "Pipelines ML", icon: "Pipelines ML"},
@@ -267,15 +267,15 @@ const about = {
       {
         title: "Deep Learning",
         description: (
-            <>Frameworks et techniques avancées pour concevoir et entraîner des réseaux de neurones modernes.</>
+          <>Frameworks et techniques avancées pour concevoir et entraîner des réseaux de neurones modernes.</>
         ),
         tags: [
-          {name: "TensorFlow", icon: "TensorFlow"},
-          {name: "PyTorch", icon: "PyTorch"},
-          {name: "Modèles Convolutifs", icon: "CNN"},
-          {name: "Modèles Récurrents", icon: "RNN" },
-          {name: "Modèles Génératifs", icon: "Modèles Génératifs"},
-          {name: "Reinforcement Learning", icon: "Reinforcement Learning"},
+          { name: "TensorFlow", icon: "TensorFlow" },
+          { name: "PyTorch", icon: "PyTorch" },
+          { name: "Modèles Convolutifs", icon: "CNN" },
+          { name: "Modèles Récurrents", icon: "RNN" },
+          { name: "Modèles Génératifs", icon: "Modèles Génératifs" },
+          { name: "Reinforcement Learning", icon: "Reinforcement Learning" },
           // {name: "Modèles Génétiques", icon: "NEAT"},
           // {name: "Transfer Learning", icon: "Transfer Learning"}
         ]
@@ -283,14 +283,14 @@ const about = {
       {
         title: "Data Engineering léger",
         description: (
-            <>Outils essentiels pour automatiser des flux de données, travailler avec des environnements techniques et structurer des pipelines simples.</>
+          <>Outils essentiels pour automatiser des flux de données, travailler avec des environnements techniques et structurer des pipelines simples.</>
         ),
         tags: [
-          {name: "ETL", icon: "ETL"},
-          {name: "APIs", icon: "API"},
-          {name: "Docker", icon: "Docker"},
-          {name: "Git", icon: "Git"},
-          {name: "Jupyter Notebook", icon: "Jupyter Notebook"},
+          { name: "ETL", icon: "ETL" },
+          { name: "APIs", icon: "API" },
+          { name: "Docker", icon: "Docker" },
+          { name: "Git", icon: "Git" },
+          { name: "Jupyter Notebook", icon: "Jupyter Notebook" },
           // {name: "Google Colab", icon: "Google Colab"}
         ]
       }
@@ -298,7 +298,7 @@ const about = {
   }
 };
 
-  const blog = {
+const blog = {
   label: "Blog",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
